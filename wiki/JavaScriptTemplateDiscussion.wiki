@@ -1,0 +1,491 @@
+= JavaScript Template Community Wiki/Discussion =
+{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+
+----
+'''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
+
+We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
+
+----
+
+Feedback?  Suggestions?
+
+There is a problem in the {elseif} control structure, the statment parses with a missing closing brace, in the template.js file we replaced the line defining the tag : 
+
+{{{
+"elseif" : { delta:  0, prefix: "} else { if (", suffix: ") {", paramDefault: "true" },
+}}}
+
+with this : 
+{{{ 
+"elseif" : { delta:  0, prefix: "} else if (", suffix: ") {", paramDefault: "true" }, 
+}}}
+and it works correctly now, i wonder why no one noticed this?
+
+ -- Whoops.  I've incorporated the fix into release 1.0.34 of JST.  Thanks for the catch!  -- SteveYen
+
+----
+
+I found this site via someone's blog the other day and after looking over it, I really, really like the idea. I will be trying it out very soon as I'm looking into various javascript based rich-client like functionality which TrimPath could easily fit into. My main potential drawback, or better stated request, would be to support XML data in addition to tabular data (Your query engine looks pretty slick too BTW). In the system that I intend to build, we will be using XML data between the browser and server and I have been looking towards something like xmljs.sourceforge.net for implementing this in the browser. I'm assuming that if I supply a DOM object as the context to the template processor then I can navigate via the DOM API (nextChild, childNodes, etc.) but that is far from friendly compared to XPath. - Robert McIntosh robert@bull-enterprises.com
+
+I'm glad you find the JST stuff interesting.  You should definitely be able to supply any object, including DOM objects, as ''entries'' in the context object.  Like context['invoiceDiv'] = document.getElementById('invoiceDiv');  I'm not sure (and doubt) that you can use the DOM object for the context object itself.  Once you have an XPath library, you should be able to use it by also stuffing it into the context.  Like context['xpath'] = SomeXPathUtil;  And, then in the JST do something like ${xpath(invoiceDiv, '//some/xpath/query')}  For moving data between browser and web-server, I'm more of a JSON fan myself than an XML proponent.  Good luck! - SteveYen
+
+
+I'll be... That didn't even occur to me to put the XPath library into the context along with the dom object (to clarify I didn't mean to say use the DOM as the context, but as you said, put the DOM _into_ the context and use it as the 'context' data) and apply my xpaths to it that way. 
+
+I've taken a cursory look at JSON and it is yet another intriguing technique I plan on playing around with. My main reason at the moment of going for XML was that my persistence engine will soon support XUpdate changes on a DOM tree, so therefore I could do data updates in the browser and using an Ajax approach send the data to the server as XUpdates. Combine all that with client side templates and I have the potential for a really snappy UI. Gotta love it :-) -- Robert
+
+I actually finally found some free time myself to do some larger AJAX app using JST, and am having a blast with the snappy UI thing too.  Would love to hear about your persistence engine/XUpdate solution.  Cheers -- SteveYen
+
+----
+fun for all the family :)
+
+I'm having a big time hacking this stuff!
+
+If someone else could confirm this (not quite sure, but here I go):
+
+IE 6.0.28/Win2k - JST 1.0.16
+
+when you define a macro like (note the empty line between /macro and the for)
+{{{
+{macro doTD(valueTD)}
+  <TD>${valueTD}</TD>
+{/macro}
+
+{for p in rs}
+$${doTD("")}
+{/for}
+}}}
+
+poor little IE chokes to death (no macro, no problem).
+
+My $0.2:
+
+1) When emitting the {macro} element (line 87) the code is ...if (m) _OUT_arr.push(m); }, };... and IE doesn't like the "extra" comma, so "(m)," -> "(m)". simple.
+
+2) Not so simple, IE complains about some "unterminated string". I know that from this poor text is quite hard do visualize the problem, but...
+
+Because of the empty line, the code translator emits a 
+{{{ 
+"\n 
+" 
+}}} 
+or a "\n" literal with an intrisic <CR{LF}> that came in the end of the text-to-translated, and not a 
+{{{ 
+"\n" 
+}}}
+
+So when is goes to the be eval-ed it chokes. the way I fixed it (not the best, but ...) is, starting in line 221: (original code) 
+{{{
+        if (nlPrefix > 0) {
+            funcText.push('if (_FLAGS.keepWhitespace == true) _OUT.write("');
+            funcText.push(text.substring(0, nlPrefix).replace('\n', '\\n'));
+            funcText.push('");');
+        }
+
+}}}
+
+modified code 
+{{{
+        if (nlPrefix > 0) {
+            funcText.push('if (_FLAGS.keepWhitespace == true) _OUT.write("');
+            var s = text.substring(0, nlPrefix).replace('\n', '\\n');
+            if( s.charAt(s.length-1) == '\n'){
+            	s = s.substring(0, s.length-1);
+            }
+            funcText.push(s);
+            funcText.push('");');
+        }
+}}}
+
+so it eats the spurious \n
+
+-- BJessen
+
+Wow, that's a great catch and explanation.  Thanks.  I've applied your fix to JST 1.0.20.  I spend most of my time in Firefox instead of IE nowadays, so I'm afraid IE bugs always seems to get shortchanged.
+
+-- SteveYen
+
+----
+I made some investigation about problems with IE 5.0.
+
+1. function cleanWhiteSpace. In IE 5.0 RegExp instances do not have the flags re.global, re.multiline.
+Possibly we can live with less powerful regexp.
+(line 308)
+{{{
+//        result = result.replace(/^(.*\S)[ \t]+$/gm, "$1"); // Right trim.
+        result = result.replace(/^(\s*\S*(\s+\S+)*)\s*$/, '$1');
+}}}
+
+2. absence of Array.prototype.push/pop
+It can be fixed by various technics. See http://www.crockford.com "Remedial Javascript" or
+http://www.burstlib.org (search for fix_ecma.js). So we fix it by adding somewhere before template.js
+or in the beginning of template.js this code:
+{{{
+if (! Array.prototype.push) {
+    Array.prototype.push = function () {
+        for (var i = 0; i < arguments.length; ++i) {this[this.length] = arguments[i];}
+        return this.length;
+    };
+}
+
+if (! Array.prototype.pop) {
+    var UNDEFINED;
+    Array.prototype.pop = function () {
+        if (this.length === 0) {return UNDEFINED;}
+        return this[--this.length];
+    };
+}
+}}}
+After applying this fixes we have another problem :) but easy solvable.
+The problem is modified behavior of arrays because of additional pop and push functions.
+{{{
+for (var k in exprArr)
+}}}
+now returns not only expression strings, but functions push and pop too.
+So we need to fix code in function emitSectionTextLine
+(line 283)
+{{{
+//            for (var k in exprArr) {
+//                    exprArr[k] = exprArr[k].replace(/#@@#/g, '||');
+//            }
+            for (var k in exprArr) {
+                if (exprArr[k].replace) {
+                    exprArr[k] = exprArr[k].replace(/#@@#/g, '||');
+                }
+            }
+}}}
+Next we need to fix TrimPath.parseTemplate_etc.statementDef "for" definition.
+(line 78)
+{{{
+//                        return [ "var ", listVar, " = ", stmtParts[3], ";",
+//                             "if ((", listVar, ") != null && (", listVar, ").length > 0) { for (var ",
+//                             iterVar, "_index in ", listVar, ") { var ",
+//                             iterVar, " = ", listVar, "[", iterVar, "_index];" ].join("");
+
+                        return [ "var ", listVar, " = ", stmtParts[3], ";",
+                             "if ((", listVar, ") != null && (", listVar, ").length > 0) { ",
+                             "for (var ", iterVar, "_index in ", listVar, ") { ",
+                             "if (typeof(", listVar, "[", iterVar, "_index]) == 'function') {continue;}",
+                             "var ", iterVar, " = ", listVar, "[", iterVar, "_index];" ].join("");
+}}}
+to skip functions (push and pop).
+
+After this modifications example page works in IE 5.01 and 5.5.
+
+-- IgorPoteryaev
+
+That's terrific!  Thank you much.  I've integrated your solutions and have put out a new version, 1.0.30, for !JavaScript Templates.  
+
+-- SteveYen
+
+----
+
+Not sure if this should go here or on the TrimSpreadsheet page, but here goes:
+
+A great extension for this language would be the easy syntax of commonly used "widgets" - maybe using using the macro keyword already implemented.  So, on top of this templating language you could also define "higher level" controls using it, and not re-implementing the wheel everytime.  As an example, I think maybe the spreadsheet "widget" is a bit higher level than a typical widget but, how about a common every-day need: The !AutoComplete box.
+
+so, (in my fanciful world) you could define a template thusly (or similarly):
+
+{{{
+   ${AutoCompleteBox(["waytoolongword", "anotherreallongword", "dontmakemetypethisout!"])}
+}}}
+
+and that would output a javascripted <input type=text> box that dropped down a menu or something on keypress - or using more arguments, other configurable behavior/shenanigans, or say you could pass in a function reference (instead of an array) to retrieve matches (so they could be GETed from the server)...
+
+Off the top of my head (you know, i haven't thought about what i'd like too much) here's a few "widgets" i think would be really great and (mostly) feasible to implement, but a glance at any modern widget library also names (at least) all these:
+  * Tabs/Tabbox
+  * The !TreeView control (with collapsible branches, etc)
+  * Spellchecked Text Area (complete with visual error indication)
+  * The Rich Text editing area (a bit like this wiki provides)
+  * the ever-popular (and impossible) drop down menus 
+  * Numeric Input ("spinner" control) & Date input boxes 
+  * tri-state checkboxes/buttons?
+  * Scrollable area 
+  * !AutoComplete
+  * Sortable tables/columned listboxes, or columned <select> boxes
+  * More comprehensive (than the <img> tag) Image box (display only region of image, abstracted image  swapping, image scaling/zooming,  
+  * As well as any other hare-brained lavish features that make geeks drool
+
+Now, I realize this is a tall order, but it's certainly something to think about - What really is needed is a framework for developing these and letting the Community go wild on it.  Let's get a discussion going, i'm more than happy to participate in the development of such things, but I want to Do It Right.
+
+-- Thanks for the comments and ideas.  Would love to start a discussion about this, but my dad passed away and I will be pretty much out of touch for the duration.  But, I don't want to stop anyone from "going wild" with ideas.  Don't stop.  -- SteveYen
+
+----
+Where Shall I Put My JavaScript Templates?
+
+There is one more approach to placing JavaScript Templates.
+External scripts!
+Put link to external script to your (X)HTML like this
+{{{
+    <script type = "text/javascript" src = "templates/someFormTemplate.js"></script>
+}}}
+where someFormTemplate.js looks like
+{{{
+var cart_jst = '\
+    Hello ${customer.first} ${customer.last}.<br/>\
+    Your shopping cart has ${products.length} item(s):\
+    <table>\
+     <tr><td>Name</td><td>Description</td>\
+         <td>Price</td><td>Quantity & Alert</td></tr>\
+     {for p in products}\
+         <tr><td>${p.name|capitalize}</td><td>${p.desc}</td>\
+             <td>$${p.price}</td><td>${p.quantity} : ${p.alert|default:""|capitalize}</td>\
+             </tr>\
+     {forelse}\
+         <tr><td colspan="4">No products in your cart.</tr>\
+     {/for}\
+    </table>\
+    {if customer.level == "gold"}\
+      We love you!  Please check out our Gold Customer specials!\
+    {else}\
+      Become a Gold Customer by buying more stuff here.\
+    {/if}\
+';
+}}}
+You only should be disciplined enough to user single and double quote marks consistently.
+
+Now in your code simply use variable used in above script.
+{{{
+var myTemplateObj = TrimPath.parseTemplate(cart_jst);
+}}}
+
+The visible benefits of this method are:
+  * reducing size of (X)HTML pages
+  * caching of templates on client side
+  * using of javascript files for placing templates looks like more adequate than using hidden textarea, IMHO.
+
+-- IgorPoteryaev
+
+Igor: I like your concept of modularizing the templates, and putting them in js files does give us all the benefits you listed (all of them important: reduction in size, caching!, textarea hack unprofessionalism) - but i'd like to find a way to do it without having to litter my templates with escape characters and burden myself with the quoting hassles (sometimes i want to use BOTH types of quotes), this is a step backwards - akin to using basic js functions to output html, (a big part of the reason) we use JST (is) b/c we don't want to deal with the problems this approach brings.  
+
+With that said, I have no great solution to that.  One approach I'm pondering is perhaps having a file extension to indicate a particular file contains ONLY JST code (perhaps ".jst" ..?) and set up an Apache handler to rewrite it slightly, escaping pertinent characters (newlines/quotes, etc) and "assigning" the escaped template code to a variable with the same name as the file.
+
+So an example: 
+  * I define a file on my server, mytemplate.jst, it contains:
+{{{
+Hello ${customer.first} ${customer.last}.<br/>
+Your shopping cart has ${products.length} item(s)
+yadda yadda, more (simple and "pure"!) jst code...
+}}}
+  * when this file gets served, apache (or something) rewrites it to be:
+{{{
+var mytemplate = "Hello ${customer.first} ${customer.last}.<br/>\
+Your shopping cart has ${products.length} item(s)\
+yadda yadda, more (simple and \"pure\"!) jst code...";
+}}}
+  * reference this template in an (x)html file like so:
+{{{
+<script src="mytemplate.jst"></script>
+<script>var myTemplateObj = TrimPath.parseTemplate(mytemplate);</script>
+}}}
+
+this i think brings the best of both worlds together, performance & maintainability, at the cost of making the server work a bit harder and having to customize it a bit more.  what do you think?
+
+-- BrianBittman
+
+Brian,
+Your approach can be implemented using, for example, this script (or similar one) on deployment stage.
+
+{{{
+# ! / usr/ bin/ python
+
+from os import linesep
+js_linesep = '\\' + linesep
+
+def process(fileName):
+    """ 
+        Converts Javascript Template text file (assumed .jst file extension) to
+        javascript file directly loadable by using <script src = "mytemplate.js"></script> syntax.
+
+        Currently this script do just this replacements in source file:
+        1 - escape all double quote symbols (") with backslash symbol (\)
+        2 - add javascript line continuation symbol (\) to all lines
+    """
+    print 'Processing %s.jst ...' % fileName
+    lines = open(fileName + '.jst').read().replace('"', '\\"').split(linesep)
+    open(fileName + '.js', 'w').write('var %s = "%s";' % (fileName, js_linesep.join(lines)))
+
+if __name__ == '__main__':
+    import sys, os
+    process(os.path.basename(sys.argv[1])[:-4])
+}}}
+
+IMHO, it is better to preprocess source javascript files to remove extra stuff (comments, whitespaces ...).
+We, for example, use Douglas Crockford' JavaScript Minifier (http://www.crockford.com/javascript/jsmin.html) in
+our deployment script.
+
+HTH.
+
+-- IgorPoteryaev
+
+----
+Thank you Igor!
+And for the perl inclined among us, here's how I did it:
+{{{
+    my $filename = 'some/path/to/yourfile.jst';  #the hypothetical
+
+    #preprocess the template
+    my $varname = $filename;
+    $varname = (split /\//, $varname)[-1];  #give me the file, no path info (MAKE A NOTE OF THIS! don't stomp on your template variable names)
+    $varname =~ s/[^a-zA-Z0-9_]/_/g;  #make a legit variable name (MAKE NOTE OF THIS)
+    
+    open JS, "<$filename";
+    my @js_lines = map { 
+        chomp;
+        s/"/\\"/g;      #replace all " chars => \"
+        $_;
+    } <JS>;
+    close JS;
+    
+    print "Content-Type: application/x-javascript\n\n"; 
+    print qq~var $varname = "~. join(qq~ \\\n~, @js_lines) . qq~";~;
+}}}
+and you can pick up your template in the variable named yourfile_jst (or whatever extension it may have had)
+-BrianBittman
+
+----
+
+Not sure if this is even a good idea but let's see what the people think, I like it so far...
+
+As I was authoring templates it dawned on me (or should I say, was forced upon me) that you cannot write any javascript inside the template and have it exist in the document - the reason for this is that unless the template output is written with a document.write() -- as is often the case -- call it won't get added to the document "script library".  To compensate for this I decided that I needed another way to include script in the template, so I added 2 more tags to the TPT tagset: "eval" and "minify".  (Minify was inspired by Crockfords' JSMin code, but does not do nearly as much as JSMin does, though it ought to - anybody..?) 
+
+I butchered the {cdata} parsing block in the template.js file to make it work for more than just cdata, so eval & minify work just like cdata did (don't eval any "{" characters, and look for an customized ending block) but they do something different with the "inner block".  So if cdata takes the entire text inside it's beginning and ending block and outputs it verbatim, minify just trims and collapes all whitespace before printing it (and it should remove all comments too! not yet..) and eval, takes the inside and well, calls eval() on it, throwing an error if it fails.
+
+A tangent:
+While I was at it, the code that handled cdata tags is now much more scalebable to do more interesting things, and also for any of these "block tags" (ie, cdata, minify and eval, for now) you can omit the "marker" and it will search instead for {/block_name} - an example helps here.  For any block tag you can:
+{{{
+{BLOCK}your text here{/BLOCK}
+}}}
+where "BLOCK" is replaced by any valid block tag (currently: cdata, minify or eval) - of course the old way of doing
+{{{
+{BLOCK EOFMARKER}your text hereEOFMARKER
+}}}
+still works.
+
+
+How are these useful?  ok, minify might be used thusly: 
+{{{
+<select onchange="{minify EOFMIN}
+     ...Do some complicated javascript...;
+     ...more js code here...;
+     this.enabled = false;
+EOFMIN">
+}}}
+basically allowing you to inline long functions into your elements, you could do this with html before too, but without newlines in your js code it becomes pretty unweildy...
+
+using the eval, why ever would you want this?  well i'll show you:
+{{{
+<select onchange="sel_onchange()"></select>
+{eval} 
+    sel_onchange = function() {
+     ...Do some complicated javascript...;
+     ...more js code here...;
+    }
+{/eval}
+}}}
+and now after this template is processed (ahem, each time this template is processed) a variable named sel_onchange is populated with that function - effectively allowing you to define functions in your template, which (unless you were outputting the templates with document.write) you could not do before.  a couple of caveats however, notice that i a) did not say "var sel_onchange" b/c that would then scope the variable inside the eval and it would never be accessible and b) did not say "function sel_onchange()" for the same reasons.  in mozilla anyway, you don't need to predeclare sel_onchange anywhere, ie may be different - can somebody let me know?
+
+so a couple of bad ideas... at the very least i've rewritten the cdata parsing block to be more expandable and allowed for the automatic {/cdata} block end markers.  umm, i guess i'll attach my template.js  file to this page at the bottom
+
+--BrianBittman
+
+This is actually a pretty *good* idea.  I've incorporated the cdata/eval/minify features into release 1.0.34 and also the loop indexVar_ct variable.  -- SteveYen
+
+Thanks Steve!  I'm appreciate your enthusiastic response. but i been playing with it, the eval is a bit more awkward than i had imagined, i think i just need to break my brain into using it. but besides there are 2 things i want to put forward as being required for the {eval} feature:
+
+1) this is so obvious, it's ridiculous this is an afterthought: a return value from an {eval} block should act like it's cdata, just put it into the output stream... 
+
+2) and, i admit, i knew my "eval" processing was a kludge that had a fatal flaw, but what, i couldn't finger, then i got it: it does the js eval() call WHILE IT'S PARSING, so things don't work quite right under some situations.  what should happen is the code should just get inlined into the function being "written by the template" - so it would get eval'd as the output was written, not during parse time, where any variables IN the template that might change, haven't changed at all yet.  i think the solution would look something like: 
+{{{
+...snip: template.js, 1.0.34, line 192...
+} else if (blockType == 'eval') {
+    emitEval(blockText, funcText);                                
+}
+...end snip...
+}}}
+and, of course, we need to define that emitEval function later on (i had posted a poor implentation of this earlier, but now it's fixed), this is what the emitEval should look like:
+{{{
+    var emitEval = function(text, funcText) {
+        
+        if (text == null ||
+            text.length <= 0)
+            return;
+        
+        funcText.push(
+            '_OUT.write( (function() { ' + text + ' })() );'
+        );
+    }
+
+}}}
+nice and clean, in'it?  (SteveYen -- also note that i "discovered" the testing framework prior to posting this ;) i'll do that from now on...)
+
+so, this eval implementation should provide a solution to both of those problems i mentioned above. 
+
+- if you use a "return" statement in your eval, that string will be printed (yay!), likewise, with no "return" statement, nothing is printed
+
+- "eval" code is executed as the output is written, not as the template is parsed
+
+and just for kicks, if you want to have fun with this, the first one's free:
+{{{
+<textarea id="myjst_jst" style="display:none">
+    see -- 
+    {eval}
+       return something("yep.")
+    {/eval}
+</textarea>
+<script>
+    alert(
+        TrimPath.parseDOMTemplate('myjst_jst').process({
+           'something': function(i) { return " you passed in: " + i; }
+        })
+    );
+</script>
+}}}
+
+Oh and mailing list (mentioned below, but earlier), i second the motion.
+
+--BrianBittman
+
+Right-o.  Release 1.0.36 of JST has the {eval} block fix.  Note that I didn't use a separate emitEval() helper function, but your description really helped.
+
+-- SteveYen
+
+----
+You guys might need a mailing list soon... I got quick question. I am wanting to combine the TrimQuery with JST. I have the query part working like I want it, but I have a problem with the template. I invoke the template with a "processDOMTemplate("template", data)" where 'data' is the variable of the query result. My problem is I don't know how to access this result(s) in a for loop. The examples given assume a string with a named object of the results, such as Customer : [ id:1 ],etc (syntax may be incorrect but you get the idea). Well, the result from the query doesn't provide this 'object' as far as I know, so I can't access it with (for p in players). 
+
+Can I use the resulting array from the query as the data or must the data be a string that then gets evaled? In case it helps, my use case is that I query up a table and build a JSON array in PHP. This then gets evaled and I use it as a table for then doing paging, without having to go back to the server. If I 'manually' do my template, via building up HTML, it works just fine, but I thought I would throw in the JST for the sake of trying it.
+
+Thanks for any help,
+-- Robert McIntosh
+-- robert.mcintosh@uug.com
+
+How about an extra level of indirection when you pass the data into the template engine?
+{{{
+  var data = /* anArrayOfResults */
+  var output = TrimPath.processDOMTemplate("template", { data : data });
+
+  // which is the same as...
+  var data = /* anArrayOfResults */
+  var temp = new Object();
+  temp.data = data;
+  var output = TrimPath.processDOMTemplate("template", temp);
+}}}
+Then in your template the {for record in data} should work?  By the way, your use case sounds cool. -- SteveYen
+
+Ok, call me an amateur :-) I figured it was something like that but I just couldn't figure it out. I'll blame it on being a friday afternoon... That worked perfectly, thanks Steve. As soon as I get it into prod I'll send a link just in case you guys end up having a 'who's using it' page or something. Thanks again, Robert
+
+Here's a users page: TrimPathUsers
+
+----
+On the subject of 'where to put it', I had thought about having the template fragments on the server, and loading them via xmlHttpRequest. The idea is to load each template as you need it then cache it in the browser where you can then put it dynamically in a hidden text area. If you have a large number of templates, this would allow the page to load quickly then retrieve the templates as needed. Of course you could preload some and cache others or whatever you needed. By the same thought, you could load and parse then cache as well.
+
+- RobertMcIntosh
+
+----
+'''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
+
+We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
+
+----
+{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }

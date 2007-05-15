@@ -1,0 +1,48 @@
+= TrimSpreadsheet =
+{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }
+
+'''TrimSpreadsheet''' is a lightweight [wiki:TrimPathLicense open-source] !JavaScript spreadsheet engine.  It let's you work with spreadsheet data right in your web browser.  As with all !TrimPath components, the '''TrimSpreadsheet''' engine is written as 100% standards-based !JavaScript and CSS.  Spreadsheets are stored as HTML <table> markup, so it's easy to understand and embed into your own web pages.  Merely assign a class of "spreadsheet" to your <table>, and the !TrimSpreadsheet engine will do the rest.  Anyone familiar with CSS can also easily create their own spreadsheet themes.
+
+== Demos ==
+Want to see !TrimSpreadsheet in action?  Here's some demos...
+ * [http://trimpath.com/demos/test1/trimpath/spreadsheet_demo0.html software analysis spreadsheet].
+ * [http://trimpath.com/demos/test1/trimpath/spreadsheet_demo1.html product comparison spreadsheet].
+ * [http://trimpath.com/demos/test1/trimpath/spreadsheet_blank.html blank spreadsheet].
+Note: these demos run the latest, most featureful development code.  Please see the [wiki:TrimPathDownload download] page if you want a stable prior release.
+
+== Features ==
+ * Formulas.
+   * SUM, COUNT, AVERAGE, MIN, MAX.
+   * Math operators */+-, parenthesis.
+   * Any !JavaScript expression.
+ * Styling And Fonts.
+   * CSS styling fully supported.
+   * Bold, italic, underline, left/center/right, etc.
+ * Recalculation Engine Features.
+   * Automated recalculations (by default).
+   * API-controllable recalculations, for firing off big recalculations just when you want.
+   * Cycle detection, so no infinite loops during recalculation.
+   * The recalculation engine is '''cooperative''', so you can optionally programmatically split a large recalculation into multiple phases.  If you expect users to have huge spreadsheets, this can help ensure that the engine does not lock up the browser UI.
+   * The recalculation engine is a separate sub-component that can be used without the UI component.
+ * Simple
+   * !TrimSpreadsheet follows unobtrusive !JavaScript design principles, so a spreadsheet is as simple as an HTML <table>.
+   * !TrimSpreadsheet markup is human readable, highly semantic and search indexer friendly.
+   * The !TrimSpreadsheet engine is smaller than most Excel spreadsheets.
+ * Hypertext Cell Contents.
+   * HTML fragments are supported in your spreadsheet cells.
+ * Cross-browser.
+ * Configurable.
+   * Scrollbars, row/column header bars, and formula controls are all controllable thru simple HTML markup.
+ * Cool Only In A Browser
+   * Only those who've programmed against DHTML/DOM would think this is neat, but regular spreadsheet users will yawn...
+     * Header Row & Column Bars that (try) to stay put during scrolling.
+     * Resizable Rows & Columns through mouse dragging.
+
+== More information ==
+ * [wiki:TrimSpreadsheetBasicPrimer A Basic Primer To Using TrimSpreadsheet]
+ * [wiki:TrimPathDownload TrimSpreadsheet Downloads]
+ * [wiki:TrimSpreadsheetDiscussion TrimSpreadsheet Community Wiki]
+ * [wiki:TrimSpreadsheetRunsIn TrimSpreadsheet Browser Compatibility]
+
+----
+{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }

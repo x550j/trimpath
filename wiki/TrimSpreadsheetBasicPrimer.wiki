@@ -1,0 +1,165 @@
+= TrimSpreadsheet Basic Primer =
+{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }
+
+''Major acknowledgements to Eric Meyer, whose terrific [http://www.meyerweb.com/eric/tools/s5/ S5 web presentation software] inspired the !TrimSpreadsheet project, and whose ideas and content were liberally and lazily cribbed.  Thanks for the genesis! -- SteveYen''
+
+For a newcomer, creating a spreadsheet in !TrimSpreadsheet may seem a bit daunting at first. Don't panic! Writing your own spreadsheet is very, very easy. In order to help smooth the way, here's a short primer on what to change and what to leave alone in an !TrimSpreadsheet spreadsheet file.
+
+== First Steps ==
+
+First, [wiki:TrimPathDownload download] the !TrimSpreadsheet spreadsheet archive. This archive that contains everything you'll need to create a spreadsheet: the spreadsheet file itself, the style sheets that make it look pretty, and the JavaScript that drives the actual spreadsheet interface and formula recalculations.
+
+Once you've downloaded the archive and uncompressed it, amongst the new files you should find a file named spreadsheet_blank.html. All the other files are more sample files or are CSS and JavaScript bits that make the spreadsheet work. We're not going to mess with those. 
+
+For those of you who haven't downloaded, but want to see the spreadsheet in action anyways, here's an [http://trimpath.com/demos/test1/trimpath/spreadsheet_blank.html online version].
+
+Now, we're going to edit the file spreadsheet_blank.html. Go ahead and load it up into your favorite editor, whether that's Dreamweaver, Notepad, emacs, !TextMate or BBEdit. 
+
+== Straight To The Head ==
+
+The first part of the spreadsheet_blank.html file, at least the part after the DOCTYPE and the <html> tag, is the head element, which looks like...
+{{{
+<head>
+    <title>[spreadsheet title]</title>
+    <script language="javascript" src="spreadsheet.js"></script>
+    <link rel="stylesheet" type="text/css" href="spreadsheet.css"/>
+    <link rel="stylesheet" type="text/css" href="spreadsheet_grey.css"/>
+</head>
+}}}
+
+For the most part, you shouldn't have to ever touch this part of the file. In fact, it's better to avoid it. If you changed any of the link elements, for example, you might break the slide show! So you'll want to just skip past it... except for one thing. See the title element? Change its contents from "[spreadsheet title]" to the title of the spreadsheet. So if you're doing a spreadsheet on some product comparison, you might call the presentation "Price Research". Go ahead and change the title contents to say that...
+{{{
+<head>
+    <title>Price Research: Bang For The Buck</title>
+    <script language="javascript" src="spreadsheet.js"></script>
+    <link rel="stylesheet" type="text/css" href="spreadsheet.css"/>
+    <link rel="stylesheet" type="text/css" href="spreadsheet_grey.css"/>
+</head>
+}}}
+
+Other than that, you don't need to make any changes to this part of the file. Let's move on to the next part.
+
+== Spreadsheet Decorations ==
+
+If you move downward in the spreadsheet_blank.html file, you'll find several <div> tags.  These control the decorations around the spreadsheet, such as whether we want editing controls (a place to type formulas), whether we want a scrolling window, and and whether we want header bars along the top and left of the spreadsheet.  
+{{{
+ <div class="spreadsheetEditor">
+  <div class="spreadsheetScroll" style="width:500px; height:200px;">
+   <div class="spreadsheetBars">
+   ...
+   </div>
+  </div>
+ </div>
+}}}
+At the bottom of the file, we see that the <div> tags are closed off with matching </div> close tags.
+
+In the <div class="spreadsheetScroll">, the width and height style attributes define the viewing portal for the spreadsheet.  For example, if our full spreadsheet ends up being larger than 500 pixels wide or 200 pixels tall, the viewing portal (which is only 500 pixels wide and 200 pixels tall) will automatically get scrollbars.
+
+If you don't want all or some of these decorations, just remove the respective <div> tag and its matching close </div> tag.
+
+== The Table ==
+
+Now, for the table...
+{{{
+      <table class="spreadsheet" width="700" border="1">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        ...
+      </table>
+}}}
+
+The table is just a regular HTML <table>, except it has a class of "spreadsheet".  Also, the total width of 700 is explicitly declared and the column widths are explicitly declared (with the <COL> tags).  These width declarations are needed by the !TrimSpreadsheet engine.
+
+(Aside for skilled web developers: if you like XHTML, yes, you can add THEAD, TBODY, TFOOT, COLGROUP tags, too.  But, as yet, the !TrimSpreadsheet engine doesn't handle rowspan/colspan and nested spreadsheets.)
+
+In the !TrimSpreadsheet user interface, you can use mousing drag-&-drop to resize your column widths and row heights.  To do this, in the header bars, just use your mouse to click and drag on the little lines that separate column and row labels.
+
+You can now put data into the <td></td> tags.  This data can be numbers, text, or even more HTML.
+
+And, you can also put formulas into attributes, like <td formula="=A1+B2">.
+
+A prebuilt example would help show this better.  In the the downloaded archive, another file, spreadsheet_demo0.html, contains a table with some filled in information.  Here's a part of that file..
+{{{
+      <table ...>
+        ...
+        <tr><td style="font-weight:bold;">Component Name</td>
+            <td style="font-weight:bold;">Description</td>
+            <td style="font-weight:bold;">LOC</td>
+            <td style="font-weight:bold;">Link</td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/JavaScriptTemplates">JavaScript Templates</a></td>
+            <td>A template engine (like PHP/ASP/JSP).</td>
+            <td>300</td>
+            <td><a href="http://trimpath.com/project/wiki/JavaScriptTemplates">http://trimpath.com/project/wiki/JavaScriptTemplates</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/TrimQuery">TrimQuery</a></td>
+            <td>A feature-rich, SQL-like query engine.</td>
+            <td>600</td>
+            <td><a href="http://trimpath.com/project/wiki/TrimQuery">http://trimpath.com/project/wiki/TrimQuery</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">TrimSpreadsheet</a> Engine</td>
+            <td>A spreadsheet recalculation engine.</td>
+            <td>300</td>
+            <td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">http://trimpath.com/project/wiki/TrimSpreadsheet</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">TrimSpreadsheet</a> UI</td>
+            <td>A spreadsheet user interface.</td>
+            <td>700</td>
+            <td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">http://trimpath.com/project/wiki/TrimSpreadsheet</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td style="text-align:right;">Total lines of JavaScript code:</td>
+            <td formula="=SUM(C2:C5)"></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td style="text-align:right;">Average lines of JavaScript code:</td>
+            <td formula="=AVERAGE(C2:C5)"></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        ...
+      </table>
+}}}
+Again, for those who have not downloaded the archive, you can also view the [http://trimpath.com/demos/test1/trimpath/spreadsheet_demo0.html spreadsheet_demo0.html online].
+
+As you can see, some cells have '''formula''' attributes, such as formula="=AVERAGE(C2:C5)".  These formulas are recalculated by the spreadsheet engine automatically on startup and whenever data changes (when you use the formula edit controls).
+
+Other cells having '''style''' attributes, such as style="font-weight:bold;".  You can use regular old CSS style syntax here.  
+
+In the !TrimSpreadsheet user interface, you can use the buttons near the formula bar to toggle the bold, italic, underline, and left/right/centered style attributes of your cells.
+
+And, some table data cells have HTML text, such as the following which has a link and some text...
+{{{
+  <td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">TrimSpreadsheet</a> Engine</td>
+}}}
+
+So, replace the formulas with your own, add more formula attributes, add more rows and columns, replace the data (inside the <td></td> pairs) with your own.  There's a world of numbers out there to slice and dice.
+
+== In Summary ==
+
+As you've seen in this quick primer, creating your own spreadsheet is pretty simple. In the majority of cases, all you need is a a few <div>'s and a <table> with explicitly defined column widths.
+
+Hopefully this primer has helped you get started creating your own presentation. If there's anything missing or unclear, please let me know. 
+
+----
+{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }

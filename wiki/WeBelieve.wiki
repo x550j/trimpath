@@ -1,0 +1,24 @@
+= We Believe =
+
+== We believe in pragmatic elegance. ==
+
+The community here is about technology.  About code.  So let's make beautiful, useful technology and code.
+
+== We believe in lightness and orthogonality. ==
+
+!TrimPath should not be one giant bolus of monolithic library.  !TrimPath components should be individually consumable by developers.  We're a'la carte.  Several pieces loosely joined.  Avoid tangles and dependencies that require folks to drag in the whole shebang.
+
+Similarly, if users want to use their own favorite libraries (say, like dojotoolkit, netwidgets, some great calender control or nice CSS), they should.  Don't do anything to prevent it.  Be orthogonol and don't force our users into a walled garden.
+
+== We believe in video game goals. ==
+
+Strive for the next level.  Beat the level monster.  Help to bring your friends along.  Repeat.
+
+== We believe in community. ==
+
+It's about sharing, in giving back.  It's about friends, about having fun.  Hence !TrimPath is open source.
+
+----
+But, we still want to feed our families, pay the mortgage.  What a conundrum!  Got any [wiki:TrimPathCommunity suggestions]?
+
+

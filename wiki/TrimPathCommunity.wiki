@@ -1,0 +1,31 @@
+= TrimPath Community =
+
+----
+'''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
+
+We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
+
+----
+
+These pages are for you.  Collaborate & share.  Tips, tricks, and safety warnings.  
+
+Your stories.  Your challenges getting stuff to work.  Your successes. -- SteveYen
+
+== Categories ==
+
+ * [wiki:TrimPathUsers Folks And Apps Using TrimPath]
+ * [wiki:JavaScriptTemplateDiscussion JavaScript Template Discussion]
+ * [wiki:TrimSpreadsheetDiscussion TrimSpreadsheet Discussion]
+ * [wiki:TrimQueryDiscussion TrimQuery Discussion]
+ * [wiki:TrimJunctionCommunity TrimJunction Discussion]
+ * SandBox
+
+== About This Wiki ==
+The TrimPath Community pages or wiki is editable by its users. This is a [http://c2.com/cgi/wiki?WikiWikiWeb feature]. We hope you enjoy sharing and collaborating here. If you want to learn more, first read TracWiki.
+
+If you just want to play around with it, please use the SandBox. 
+
+----
+'''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
+
+We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10

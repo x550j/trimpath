@@ -1,0 +1,9 @@
+= TrimPath Faq =
+
+== General ==
+ * '''What is TrimPath?'''
+   * A set of open-source components to build rich web applications, like gmail.  These components are primarily developed in JavaScript, but that's not a rule.
+
+== Legal ==
+ * '''What is the TrimPath license?''' 
+   * GNU GPL, version 2 and APL.  See TrimPathLicense.

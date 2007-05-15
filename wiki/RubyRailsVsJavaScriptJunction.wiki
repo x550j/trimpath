@@ -1,0 +1,253 @@
+= Ruby on Rails Versus JavaScript on Junction Code =
+
+{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+
+Bill Katz notes that the [http://www.billkatz.com/node/42 programming language matters] when creating a framework like [http://www.rubyonrails.com/ Ruby On Rails] (RoR).
+
+For the [wiki:TrimJunction TrimPath Junction] clone of RoR, the !JavaScript language appears to be dynamic enough to support many of the concise concepts of RoR.  
+
+!JavaScript supports...
+ * duck typing
+ * closures
+ * Lisp-like features
+ * metaprogramming
+ * eval
+ * aspect oriented programming
+
+Here are some code snippet examples for comparison between Rails and Junction.
+
+== Model Example ==
+Ruby:
+{{{
+class Milestone < ActiveRecord::Base
+  belongs_to :creator,  :class_name => 'Person'
+  belongs_to :domain,   :class_name => 'Org'
+  belongs_to :project
+  belongs_to :assignee, :class_name => 'Person'
+  has_many :messages
+  has_many :todo_lists
+
+  def self.find_recent_by_project(project_id, date)
+    Milestone.find_all ["project_id = ? AND created_at > ?", project_id, date]
+  end
+end
+}}}
+
+!JavaScript:
+{{{
+Milestone = function() {
+}
+
+with (modelFor('Milestone')) {
+    belongsTo('Creator',  { modelName : 'Person' });
+    belongsTo('Domain',   { modelName : 'Org' });
+    belongsTo('Project');
+    belongsTo('Assignee', { modelName : 'Person' });
+    hasMany('Messages');
+    hasMany('TodoLists');
+}
+
+Milestone.findRecentByProject = function(projectId, date) {
+    return Milestone.findAll("Milestone.projectId = ? AND Milestone.createdAt > ?",
+                             [ projectId, date ]);
+}
+}}}
+
+== Controller Example ==
+=== Scaffolding ===
+Ruby:
+{{{
+class TodoListController < ApplicationController
+  scaffold :todo_list
+end
+}}}
+
+!JavaScript:
+{{{
+TodoListController = function() {}
+scaffold(TodoListController, 'TodoList');
+}}}
+
+=== Full Controller ===
+Ruby:
+{{{
+class MilestoneController < ApplicationController
+    layout 'main'
+    before_filter :need_login, :only => [ :edit, :update, :new, :create, :destroy ]
+
+    def index
+        @milestones = Milestone.find_all
+    end
+
+    def show
+        @milestone = Milestone.find @params['id']
+    end
+
+    def edit
+        @milestone = Milestone.find @params['id']
+    end
+
+    def update
+        @milestone = Milestone.find @params['id']
+        if @milestone.updateAttributes(@params['milestone'])
+            flash['notice'] = 'Milestone ' + @milestone.name + ' is updated.'
+            redirect_to_action 'show', @milestone.id
+        else 
+            render_action 'edit'
+        end
+    end
+
+    def new
+        @project = Project.find @params['id']
+        if (@project.nil? ||
+            (@project.domain &&
+             @project.domain != @person.domain)) 
+            flash['notice'] = 'Unknown project.'
+            return redirect_to_action 'index'
+        end
+
+        @milestone = Milestone.new
+        @milestone.creator = @person
+        @milestone.domain  = @person.domain
+        @milestone.project = @project
+    end
+
+    def create
+        @milestone = Milestone.new @params['milestone']
+        @milestone.creator = @person
+        @milestone.domain  = @person.domain
+        if milestone.save
+            flash['notice'] = 'Milestone ' + @milestone.name + ' is created.'
+            redirect_to_action 'show', :id => @milestone.id
+        else 
+            render_action 'new'
+        end
+    end
+
+    def destroy
+        milestone = Milestone.find @params['id']
+        if milestone
+            milestone.destroy
+            flash['notice'] = 'The milestone ' + milestone.name + ' is deleted.';
+            redirect_to :controller => 'project', :action => 'show', 
+                        :id => milestone.project.id
+            return
+        end
+        flash['notice'] = 'We could not delete an unknown milestone.';
+        redirect_to 'home', :action => 'start'
+    end
+end
+}}}
+
+!JavaScript:
+{{{
+MilestoneController = function() {
+    this.index = function(req, res) {
+        res.milestones = Milestone.findAll();
+    }
+
+    this.show = function(req, res) {
+        res.milestone = Milestone.find(req['objId']);
+    }
+
+    this.edit = function(req, res) {
+        res.milestone = Milestone.find(req['objId']);
+    }
+
+    this.update = function(req, res) {
+        with (res) {
+            res.milestone = Milestone.find(req['objId']);
+            if (milestone.updateAttributes(req['milestone'])) {
+                flash['notice'] = 'Milestone ' + milestone.name + ' is updated.';
+                redirectToAction('show', milestone.id);
+            } else 
+                renderAction('edit');
+        }
+    }
+
+    this.newInstance = function(req, res) {
+        with (res) {
+            res.project = Project.find(req['objId']);
+            if (project == null ||
+                (project.domainId != null &&
+                 project.domainId != person.domainId)) {
+                flash['notice'] = 'Unknown project.';
+                return redirectToAction('index');
+            }
+
+            res.milestone = Milestone.newInstance();
+            milestone.creatorId = person.id;
+            milestone.domainId  = person.domainId;
+            milestone.projectId = project.id;
+        }
+    }
+
+    this.create = function(req, res) { 
+        with (res) {
+            res.milestone = Milestone.newInstance(req['milestone']);
+            milestone.creatorId = person.id;
+            milestone.domainId  = person.domainId;
+            if (milestone.save()) {
+                flash['notice'] = 'Milestone ' + milestone.name + ' is created.';
+                redirectToAction('show', milestone.id);
+            } else 
+                renderAction('newInstance');
+        }
+    }
+
+    this.destroy = function(req, res) {
+        var milestone = Milestone.find(req['objId']);
+        if (milestone != null) {
+            milestone.destroy();
+            res.flash['notice'] = 'The milestone ' + milestone.name + ' is deleted.';
+            res.redirectTo('project', 'show', milestone.projectId);
+            return;
+        }
+        res.flash['notice'] = 'We could not delete an unknown milestone.';
+        res.redirectTo('home', 'start');
+    }
+
+    beforeFilter(needLogin, this, 'edit', 'update', 'newInstance', 'create', 'destroy');
+}
+
+MilestoneController.layoutName = 'main';
+}}}
+
+== View Example ==
+Ruby ERb template:
+{{{
+<div>
+    <h2>Milestones</h2>
+    <table>
+    <% milestones.each do |milestone| %>
+      <tr><td><%= link_to milestone.name, :controller => 'milestone', 
+                          :action => 'show', :id = milestone.id %></td>
+          <td><%= link_to 'Edit', :action => 'edit', :id = milestone.id %></td>
+          <td><%= link_to 'Delete', :action => 'destroy', :id =  milestone.id %></td>
+          </tr>
+    <% end %>
+    </table>
+</div>
+}}}
+
+[wiki:JavaScriptTemplates JavaScript Template] (JST):
+{{{
+<div>
+    <h2>Milestones</h2>
+    <table>
+    {for milestone in milestones}
+      <tr><td>${linkTo(milestone.name, 'milestone', 'show', milestone.id)}</td>
+          <td>${linkTo('Edit', null, 'edit', milestone.id)}</td>
+          <td>${linkTo('Delete', null, 'destroy', milestone.id)}</td>
+          </tr>
+    {/for}
+    </table>
+</div>
+}}}
+
+----
+
+See also: [wiki:TrimJunction TrimPath Junction], [wiki:RubyVsJavaScript Ruby versus JavaScript]
+
+----
+{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }

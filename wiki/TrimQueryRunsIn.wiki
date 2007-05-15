@@ -1,0 +1,13 @@
+= TrimQuery Browser Compatibility =
+{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+
+Does !TrimQuery work everywhere?  Here's what we know...
+
+|| '''Environment''' || '''Runs?''' || '''Notes''' ||
+|| Windows - Mozilla Firefox 1.0 || yes || my main browser - SteveYen ||
+|| Windows - Internet Explorer 6.0 || yes || SteveYen ||
+|| Linux - Konqueror 3.2.3 || yes || MichelBertier ||
+|| Windows - Opera 8.51 || no || Opera doesn't like "theEval".  Using "eval" worked ||
+
+----
+{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
