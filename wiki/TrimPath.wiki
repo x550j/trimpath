@@ -1,0 +1,5 @@
+#summary TrimPath Introduction
+
+TrimPath -- your source for fat-free, rich, sharable web applications and components since 2004
+
+TrimPath provides open-source web applications and technologies that allow developers to easily and quickly build rich web applications. 
