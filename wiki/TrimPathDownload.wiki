@@ -1,8 +1,10 @@
 = TrimPath Downloads / Version History =
 
+*Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access the downloads.*
+
 TrimPath follows an even/odd release numbering scheme.  Even numbers are public releases.  Odd numbers are development and work-in-progress versions.  Also, release numbers are global across all TrimPath components, which is why it looks like release numbers for individual components are skipping numbers.
 
-Use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access downloads.
+*Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access the downloads.*
 
 == JavaScript Templates ==
 About [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates]
