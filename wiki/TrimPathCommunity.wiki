@@ -13,11 +13,11 @@ Your stories.  Your challenges getting stuff to work.  Your successes. -- SteveY
 
 == Categories ==
 
- * [wiki:TrimPathUsers Folks And Apps Using TrimPath]
- * [wiki:JavaScriptTemplateDiscussion JavaScript Template Discussion]
- * [wiki:TrimSpreadsheetDiscussion TrimSpreadsheet Discussion]
- * [wiki:TrimQueryDiscussion TrimQuery Discussion]
- * [wiki:TrimJunctionCommunity TrimJunction Discussion]
+ * [http://code.google.com/p/trimpath/wiki/TrimPathUsers Folks And Apps Using TrimPath]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion JavaScript Template Discussion]
+ * [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion TrimSpreadsheet Discussion]
+ * [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion TrimQuery Discussion]
+ * [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity TrimJunction Discussion]
  * SandBox
 
 == About This Wiki ==

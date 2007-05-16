@@ -1,9 +1,9 @@
 = Follow A Request Through TrimPath Junction =
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
 
-For web application developers, let's follow a request through the [wiki:TrimJunction Junction] Model-View-Controller framework.  That is, what happens when a user clicks on a hyperlink in a Junction application...
+For web application developers, let's follow a request through the [http://code.google.com/p/trimpath/wiki/TrimJunction Junction] Model-View-Controller framework.  That is, what happens when a user clicks on a hyperlink in a Junction application...
 
-If you've seen a .jst ([wiki:JavaScriptTemplates JST]) file in a Junction app, you've probably see lots of calls to the linkToLocal() function.  For example...
+If you've seen a .jst ([http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JST]) file in a Junction app, you've probably see lots of calls to the linkToLocal() function.  For example...
 {{{
 <div>
 Click ${linkToLocal('here', 'blog', 'index')} to see your blog entries.
@@ -118,4 +118,4 @@ ASIDE: If we were running on the server side, the Junction framework would inste
 Finally, you may have also noticed, in order to generate the hyperlinks, the template uses the linkToLocal() function.  This brings us back to the start and completes this article.
 
 ----
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }

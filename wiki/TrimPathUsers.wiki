@@ -1,6 +1,6 @@
 = Folks And Applications Using TrimPath Components =
 
- * [wiki:JavaScriptTemplates JavaScript Templates]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates]
    * http://www.feedtagger.com -- Chris (QWAD Technologies / Framework)
    * http://struts.apache.org/flow/ -- Apache Struts Flow project
 
@@ -9,7 +9,7 @@
  * TrimSpreadsheet
 
  * TrimJunction
-   * [wiki:NextAction Next Action]
+   * [http://code.google.com/p/trimpath/wiki/NextAction Next Action]
 
 ----
 back to TrimPathCommunity

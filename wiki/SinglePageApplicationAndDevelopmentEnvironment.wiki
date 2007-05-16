@@ -1,12 +1,12 @@
 = S''ingle'' [Page] '''Applicati'''on and Development Environment (Spade) =
 
-A "Single Page Application and Development Environment" (Spade) is a [wiki:SinglePageApplications Spa] application with an integrated development environment, all fitting onto a single web page.
+A "Single Page Application and Development Environment" (Spade) is a [http://code.google.com/p/trimpath/wiki/SinglePageApplications Spa] application with an integrated development environment, all fitting onto a single web page.
 
 More than just the classic View Source that we all know and love, with Spade techniques, you can also Manipulate Source or Edit Source right on the page.  You can tinker and improve the app, all without firing up Eclipse or Emacs.  No extra Ant or Apache needed.  The historic edit-compile-link-run-debug programming cycle loses one more small step: no more the Alt-Tab'ing between text editor and web browser.  Using a Spade, it's all now in the browser.
 
 == Is Spade Possible? ==
 
-Modern browsers like Firefox (and Internet Explorer, somewhat) appear to save any programmatic changes that were made to the DOM tree when you do a "File -> Save Page" command.  So, the question is whether there's a pathway or set of techniques that can utilize this feature or loophole to allow presentation, data, and code/behavior to be saved again and again, as a developer continues to improve his or her [wiki:SinglePageApplications Single Page Application].
+Modern browsers like Firefox (and Internet Explorer, somewhat) appear to save any programmatic changes that were made to the DOM tree when you do a "File -> Save Page" command.  So, the question is whether there's a pathway or set of techniques that can utilize this feature or loophole to allow presentation, data, and code/behavior to be saved again and again, as a developer continues to improve his or her [http://code.google.com/p/trimpath/wiki/SinglePageApplications Single Page Application].
 
 == Is Spade Worthwhile? ==
 
@@ -15,7 +15,7 @@ Well, we'll see.  Throw it out there and see if it sticks.
 Related: does Spade deserve YABA (Yet Another Bleeping Acronym)?  What, you mean like Ajax?
 
 == Known Spade Applications ==
- * [wiki:NextAction Next Action] -- one of the first applications built using the [wiki:TrimJunction Junction MVC framework].  [wiki:NextAction Next Action] is a todo-list manager in the [wiki:GettingThingsDone Getting Things Done] style.
+ * [http://code.google.com/p/trimpath/wiki/NextAction Next Action] -- one of the first applications built using the [http://code.google.com/p/trimpath/wiki/TrimJunction Junction MVC framework].  [http://code.google.com/p/trimpath/wiki/NextAction Next Action] is a todo-list manager in the [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] style.
  * [http://editthispagephp.sourceforge.net/ EditThisPagePHP] -- at surface simple, a single page "edit this page" interface. However, also supports trackbacks, comments, diffs, RSS feeds for current version and diffs, one file installer, etc. Earlier versions also allowed you to edit the PHP in the script, but this is now disallowed for security reasons.
    * This seems to require a webserver with PHP.
  * See also: http://c2.com/cgi/wiki?WikiWithProgrammableContent

@@ -1,6 +1,6 @@
 = TrimJunction Community =
 
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
 
 ----
 '''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
@@ -65,4 +65,4 @@ This is one of the coolest things I've seen around - you are a real ecmascript e
 We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
 
 ----
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }

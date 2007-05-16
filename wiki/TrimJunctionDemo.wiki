@@ -1,8 +1,8 @@
 = TrimPath Junction Demo =
 
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
 
-The following is an early, '''unfinished''', static-yet-dynamic demo of !TrimPath Junction.  It's called [wiki:NextAction Next Action], a todo-list tracking tool in the [wiki:GettingThingsDone Getting Things Done] style.
+The following is an early, '''unfinished''', static-yet-dynamic demo of !TrimPath Junction.  It's called [http://code.google.com/p/trimpath/wiki/NextAction Next Action], a todo-list tracking tool in the [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] style.
 
  * http://trimpath.com/demos/nextaction_static1/nextaction.htm
 
@@ -11,13 +11,13 @@ The demo's data model is for action, context, and project tracking.  It's static
 It runs in Firefox 1.0+.  It runs less well in IE 6.x, because I spend most of my day in Firefox.
 
 While running the demo, some things to note:
- * Notice the '''show me the code''' link.  It will reveal at the bottom of the page a in-browser mini development environment -- Next Action is a [wiki:SinglePageApplicationAndDevelopmentEnvironment SPADE] application.  You'll be able to see the Rails-like file and directory structure of the application.  Clicking on each file name reveals the relevant source code.
+ * Notice the '''show me the code''' link.  It will reveal at the bottom of the page a in-browser mini development environment -- Next Action is a [http://code.google.com/p/trimpath/wiki/SinglePageApplicationAndDevelopmentEnvironment SPADE] application.  You'll be able to see the Rails-like file and directory structure of the application.  Clicking on each file name reveals the relevant source code.
    * The Data tabs allow for raw JSON record and table schema manipulation.  
    * You can also run SQL queries, using the TrimQuery subset of SQL.  For example: SELECT Action.* FROM Action
    * The Test tab is for unit testing.   
  * Go offline: when running the demo, in your browser, do a File->Save Page As (or equivalent).  If you later open up the saved page with your web browser, you can still work with the demo data, even when disconnected.  You can continue doing File->Save Page As repeatedly as you edit your records and application code.  The Junction project will be exploring this effect to see if '''lightweight disconnected web applications''' and re-synchronizing data on reconnect are possible.
 
-Any [wiki:TrimJunctionCommunity feedback, criticisms, and help] are welcome.
+Any [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity feedback, criticisms, and help] are welcome.
 
 ----
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }

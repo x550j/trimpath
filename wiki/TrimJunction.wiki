@@ -1,16 +1,16 @@
 = TrimJunction =
 
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] | [wiki:TrimPathDownload download] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
 
 '''!TrimPath Junction''' is a clone or port of the terrific [http://www.rubyonrails.com/ Ruby on Rails] web MVC framework into !JavaScript.
 
 '''!TrimPath Junction''' is also sometimes referred to as !TrimJunction, or as just Junction.
 
-Here's a code snippet comparison between [wiki:RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
+Here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
 
 == News ==
  * 2005/07/18 - New Release - 1.0.38
- * 2005/07/06 - A new demo app is available, called [wiki:NextAction Next Action]
+ * 2005/07/06 - A new demo app is available, called [http://code.google.com/p/trimpath/wiki/NextAction Next Action]
 
 == Vision ==
 
@@ -18,7 +18,7 @@ In a nutshell: mindlessly copy and port Rails, because it's a great web MVC fram
 
 Long version:
 
-With an eye towards [wiki:DontRepeatYourself Don't Repeat Yourself], spiced up with a little bit of Ajax, the grand vision of the !TrimPath Junction project is to be able to write web application logic just once, in familiar languages like !JavaScript.
+With an eye towards [http://code.google.com/p/trimpath/wiki/DontRepeatYourself Don't Repeat Yourself], spiced up with a little bit of Ajax, the grand vision of the !TrimPath Junction project is to be able to write web application logic just once, in familiar languages like !JavaScript.
 
 A Junction-based web application should run, validate input, process data, generate output and do its thing on both the server AND the client.  We use the Rhino !JavaScript runtime for the server and use your favorite, modern web browser for the client.
 
@@ -49,7 +49,7 @@ BlogPost.findByShortName = function(shortName) {
 }
 }}}
 
- * '''View''' - these are [wiki:JavaScriptTemplates JavaScript Templates] (JST).  The JST engine is another project of the !TrimPath effort.  JST templates should be familiar to anyone who knows other HTML templating markup syntax, like PHP, JSP, ASP, !FreeMarker, Velocity, Smarty, ERb.
+ * '''View''' - these are [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] (JST).  The JST engine is another project of the !TrimPath effort.  JST templates should be familiar to anyone who knows other HTML templating markup syntax, like PHP, JSP, ASP, !FreeMarker, Velocity, Smarty, ERb.
 {{{
 <div>
   Comments...
@@ -73,37 +73,37 @@ scaffold(BlogPostController, 'BlogPost')
 It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html convention, not configuration].  That is, if you just follow the naming conventions, there are no configuration files.  The Junction framework favors reflection and late-bound dynamic object extensions.  The result is less code, no recompilation steps, and faster development.
 
 == Links ==
- * [wiki:TrimJunctionDemo Online Junction Demo]
- * [wiki:TrimJunctionHowItWorks How Does Junction Work]
- * [wiki:TrimJunctionFollowARequest Follow A Request Through Junction]
- * [wiki:TrimJunctionController Junction Controller]
- * [wiki:PrototypingWithJunction Quick Application Prototyping Using Junction]
+ * [http://code.google.com/p/trimpath/wiki/TrimJunctionDemo Online Junction Demo]
+ * [http://code.google.com/p/trimpath/wiki/TrimJunctionHowItWorks How Does Junction Work]
+ * [http://code.google.com/p/trimpath/wiki/TrimJunctionFollowARequest Follow A Request Through Junction]
+ * [http://code.google.com/p/trimpath/wiki/TrimJunctionController Junction Controller]
+ * [http://code.google.com/p/trimpath/wiki/PrototypingWithJunction Quick Application Prototyping Using Junction]
 
- * [wiki:SinglePageApplications Spa -- Single Page Applications]
- * [wiki:SinglePageApplicationAndDevelopmentEnvironment Spade -- Single Page Application and Development Environment]
+ * [http://code.google.com/p/trimpath/wiki/SinglePageApplications Spa -- Single Page Applications]
+ * [http://code.google.com/p/trimpath/wiki/SinglePageApplicationAndDevelopmentEnvironment Spade -- Single Page Application and Development Environment]
 
- * [wiki:TrimPathDownload Download Junction] 
+ * [http://code.google.com/p/trimpath/wiki/TrimPathDownload Download Junction] 
    * TrimPath Components Used In Junction
-     * [wiki:JavaScriptTemplates TrimPath JavaScript Templates]
-     * [wiki:TrimQuery TrimPath TrimQuery]
-     * [wiki:TrimBreakpoint TrimPath Breakpoint]
+     * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates TrimPath JavaScript Templates]
+     * [http://code.google.com/p/trimpath/wiki/TrimQuery TrimPath TrimQuery]
+     * [http://code.google.com/p/trimpath/wiki/TrimBreakpoint TrimPath Breakpoint]
    * Other Requirements
      * [http://prototype.conio.net Prototype] 
 
  * External Resources
    * [http://www.rubyonrails.com/ Ruby on Rails]
      * Learning Ruby and Rails is a good thing, whether or not you dig Junction or not.  Rails and Ruby are very interesting technologies that show off the power of dynamic languages. Plus, since Junction suffers from a newborn project's lack of documentation, the best way to understand Junction right now is to know a little bit of its parent, Rails.
-     * [wiki:RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction] code comparison.
+     * [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction] code comparison.
    * Solving The Back Button
      * [http://dojotoolkit.org Dojo Toolkit] 
      * [http://www.contentwithstyle.co.uk/Articles/38/fixing-the-back-button-and-enabling-bookmarking-for-ajax-apps Back Button Article]
    * [http://prototype.conio.net Prototype] 
      * Junction uses the Prototype library from Sam Stephenson for Ajax and DOM animation effects.
    * [http://groove.net Groove Networks]
-   * [wiki:JsonLibrary JSON]
+   * [http://code.google.com/p/trimpath/wiki/JsonLibrary JSON]
 
 ----
 There's more to come... If you're impatient, just go read the Ruby on Rails documentation, and mentally convert everything into camelCase syntax.  For example, link_to and redirect_to_action become linkTo() and redirectToAction().
 
 ----
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] | [wiki:TrimPathDownload download] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }

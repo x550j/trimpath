@@ -1,5 +1,5 @@
 = JavaScript Template Syntax =
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
 
 This page describes the syntax for !JavaScript Templates, including its expression markup and statement tags.
 
@@ -26,7 +26,7 @@ This page describes the syntax for !JavaScript Templates, including its expressi
   ${(lastQuarter.calcRevenue() - fixedCosts) / 1000000}
 }}}
 
-Please see also the list of [wiki:JavaScriptTemplateModifiers standard modifiers] and how to use the [wiki:JavaScriptTemplateAPI API] to create your own custom modifiers.
+Please see also the list of [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers standard modifiers] and how to use the [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] to create your own custom modifiers.
 
 Expressions can also be optionally specified as "${% customer.firstName %}" syntax, which has the extra '%' delimiter characters.  This syntax is useful if your expressions have brace characters.  For example...
 {{{
@@ -289,4 +289,4 @@ The {minify} block is also useful to make long inline CSS <style> attributes rea
 }}}
 
 ----
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }

@@ -2,7 +2,7 @@
 
 All TrimPath components are licensed with the [http://trimpath.com/legal/gpl.txt GNU Public License] version 2, or, at your option, any later version of the GNU Public License.
 
-AND, by popular demand, [wiki:JavaScriptTemplates JavaScript Templates] is now also dual-licensed under the Apache License, Version 2.0.  -- Steve Yen 2005/03/02.
+AND, by popular demand, [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] is now also dual-licensed under the Apache License, Version 2.0.  -- Steve Yen 2005/03/02.
 
 == License FAQ ==
  * Why GNU GPL?
@@ -15,4 +15,4 @@ Answer: we're lazy and we are not lawyers.  We might revisit this once we get so
 
  * Can I get a commercial, non-GNU license?
    * Sure, you can be the first one in the world to help me figure out if so-called "dual licensing" makes sense for !TrimPath.  Just give me a buzz and I'm open to talk...  steve Dot yen At metaha Dot com
-   * Also, since [wiki:JavaScriptTemplates JavaScript Templates] is now also available under Apache License, that hopefully answers the this non-GNU license issue.  That should let me get back to coding.  Template away and enjoy!  -- Steve Yen 2005/02/28
+   * Also, since [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] is now also available under Apache License, that hopefully answers the this non-GNU license issue.  That should let me get back to coding.  Template away and enjoy!  -- Steve Yen 2005/02/28

@@ -1,10 +1,10 @@
 = Ruby on Rails Versus JavaScript on Junction Code =
 
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
 
 Bill Katz notes that the [http://www.billkatz.com/node/42 programming language matters] when creating a framework like [http://www.rubyonrails.com/ Ruby On Rails] (RoR).
 
-For the [wiki:TrimJunction TrimPath Junction] clone of RoR, the !JavaScript language appears to be dynamic enough to support many of the concise concepts of RoR.  
+For the [http://code.google.com/p/trimpath/wiki/TrimJunction TrimPath Junction] clone of RoR, the !JavaScript language appears to be dynamic enough to support many of the concise concepts of RoR.  
 
 !JavaScript supports...
  * duck typing
@@ -230,7 +230,7 @@ Ruby ERb template:
 </div>
 }}}
 
-[wiki:JavaScriptTemplates JavaScript Template] (JST):
+[http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Template] (JST):
 {{{
 <div>
     <h2>Milestones</h2>
@@ -247,7 +247,7 @@ Ruby ERb template:
 
 ----
 
-See also: [wiki:TrimJunction TrimPath Junction], [wiki:RubyVsJavaScript Ruby versus JavaScript]
+See also: [http://code.google.com/p/trimpath/wiki/TrimJunction TrimPath Junction], [http://code.google.com/p/trimpath/wiki/RubyVsJavaScript Ruby versus JavaScript]
 
 ----
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }

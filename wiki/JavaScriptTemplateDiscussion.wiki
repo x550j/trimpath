@@ -1,5 +1,5 @@
 = JavaScript Template Community Wiki/Discussion =
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
 
 ----
 '''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
@@ -488,4 +488,4 @@ On the subject of 'where to put it', I had thought about having the template fra
 We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
 
 ----
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }

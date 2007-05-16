@@ -9,7 +9,7 @@ Eventually "Trim" is the prefix for lots of future open-source components (e.g. 
 -- SteveYen
 
 ----
-Go to the [wiki:WikiStart Start Page]
+Go to the [http://code.google.com/p/trimpath/wiki/WikiStart Start Page]
 
 ----
 Other sightings of trimpath (thru google)...

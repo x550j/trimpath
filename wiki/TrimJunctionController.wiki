@@ -1,6 +1,6 @@
 = TrimJunction Controller =
 
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
 
 Junction Controllers are made up of one or more actions that performs its purpose 
 and then either renders a template or redirects to another action. 
@@ -78,7 +78,7 @@ The actual response text is generated automatically through the use of renders a
 == Renders ==
 
 Junction Controller sends content to the user by using one of five rendering methods. 
-The most versatile and common is the rendering of a [wiki:JavaScriptTemplates JST] template. 
+The most versatile and common is the rendering of a [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JST] template. 
 The controller passes objects to the templates by assigning properties in the res (or result) object:
 {{{
   this.show = function(req, res) {
@@ -106,7 +106,7 @@ will use the manual rendering methods:
   }
 }}}
 
-Read more about writing [wiki:JavaScriptTemplates JavaScript Templates].
+Read more about writing [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates].
 
 == Redirects ==
 
@@ -146,4 +146,4 @@ If you need to redirect on the condition of something, then be sure to use a "re
 '''Acknowledgements''': this page was ported from the !ActionController::Base API documentation from the [http://api.rubyonrails.com/ Ruby on Rails] framework.
 
 ----
-{ [wiki:TrimJunction TrimJunction home] | [wiki:TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }

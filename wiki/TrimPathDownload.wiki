@@ -3,7 +3,7 @@
 !TrimPath follows an even/odd release numbering scheme.  Even numbers are public releases.  Odd numbers are development and work-in-progress versions.  Also, release numbers are global across all TrimPath components, which is why it looks like release numbers for individual components are skipping numbers.
 
 == JavaScript Templates ==
-About [wiki:JavaScriptTemplates JavaScript Templates]
+About [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates]
 
 || Release || Date || Link ||
 || 1.0.38 || 2005/07/18 || [http://trimpath.com/project/attachment/wiki/TrimPathDownload/template.js?format=txt trimpath/template.js] ||

@@ -15,4 +15,4 @@ Features:
  * Easily found materials: any bunch of 8x11's and stapler can become a factory for the Hipster Tablet PC.
 
 See Also:
- * [wiki:NextAction Next Action] software - compatible with every Hipster Tablet PC in the world.
+ * [http://code.google.com/p/trimpath/wiki/NextAction Next Action] software - compatible with every Hipster Tablet PC in the world.

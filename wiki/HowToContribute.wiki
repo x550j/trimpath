@@ -1,7 +1,7 @@
 = How To Contribute =
 
 == It's A Wiki ==
- * The !TrimPath [wiki:TrimPathCommunity Community] pages is Trac powered.  Hence, it's a wiki.
+ * The !TrimPath [http://code.google.com/p/trimpath/wiki/TrimPathCommunity Community] pages is Trac powered.  Hence, it's a wiki.
  * We've locked down some of the main pages, but otherwise, go the Wiki Way.
  * Remember [http://c2.com/cgi/wiki?WhyWikiWorks Why Wiki Works].
 

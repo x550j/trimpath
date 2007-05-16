@@ -1,5 +1,5 @@
 = TrimQuery Discussion =
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }
 
 ----
 '''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
@@ -26,7 +26,7 @@ Hope that helps.
 
 -- BJessen
 
-Thanks much! I've put up a new version of TrimQuery (1.0.18) with your fix [wiki:TrimPathDownload for download]. 
+Thanks much! I've put up a new version of TrimQuery (1.0.18) with your fix [http://code.google.com/p/trimpath/wiki/TrimPathDownload for download]. 
 
 -- SteveYen
 
@@ -129,4 +129,4 @@ Maybe a flag or alternative method which relies on more duck typing would be a g
 We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
 
 ----
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }

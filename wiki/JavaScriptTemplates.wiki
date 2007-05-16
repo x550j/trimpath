@@ -1,7 +1,7 @@
 = JavaScript Templates =
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
 
-For web application developers, the '''!JavaScript Templates''' engine from TrimPath is a lightweight [wiki:TrimPathLicense APL / GPL open-source] component that lets you have template-based programming (like PHP/ASP/JSP) while running in a web browser.  
+For web application developers, the '''!JavaScript Templates''' engine from TrimPath is a lightweight [http://code.google.com/p/trimpath/wiki/TrimPathLicense APL / GPL open-source] component that lets you have template-based programming (like PHP/ASP/JSP) while running in a web browser.  
  * The '''JST''' engine is written entirely in standard !JavaScript.  
  * It supports a productive template markup syntax very much like [http://freemarker.sourceforge.net FreeMarker], [http://jakarta.apache.org/velocity Velocity], [http://smarty.php.net Smarty].  
  * JST is a readable alternative to manually coded massive String concatenations and major DOM/DHTML manipulations.  
@@ -10,12 +10,12 @@ Build your own modern, brilliantly rich web applications (like GMail/!OddPost/Bl
 
 More information:
  * '''10 Minute Introduction''' -- see below.
- * [wiki:JavaScriptTemplateAPI JST API]
- * [wiki:JavaScriptTemplateSyntax JST Markup Syntax]
- * [wiki:JavaScriptTemplateModifiers JST Standard Modifiers]
- * [wiki:TrimPathDownload JST Downloads]
- * [wiki:JavaScriptTemplateDiscussion JST Community Wiki]
- * [wiki:JavaScriptTemplateRunsIn JST Browser Compatibility]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI JST API]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax JST Markup Syntax]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers JST Standard Modifiers]
+ * [http://code.google.com/p/trimpath/wiki/TrimPathDownload JST Downloads]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion JST Community Wiki]
+ * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateRunsIn JST Browser Compatibility]
  * [http://trimpath.com/demos/test1/trimpath/template_demo.html JST Online Demo]
 
 NEWS: 
@@ -30,7 +30,7 @@ NEWS:
    * Ross Shaull found and provided the solution for for/forelse looping over objects.  So for/forelse now works on objects (hashes), not just arrays.
  * 2005/04/07 - New release - 1.0.30.
    * Igor Poteryaev found many issues with running IE 5.0.1/5.5, and kindly provided solutions, which were integrated into this release 1.0.30.
-   * Also, 1.0.30 supports a new "cdata" markup syntax, which tells the JST engine to skip any processing for a section of text.  See the [wiki:JavaScriptTemplateSyntax JST Markup Syntax] page for more info about '{cdata EOF} ... EOF' markup
+   * Also, 1.0.30 supports a new "cdata" markup syntax, which tells the JST engine to skip any processing for a section of text.  See the [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax JST Markup Syntax] page for more info about '{cdata EOF} ... EOF' markup
  * 2005/03/25 - New release - 1.0.26.
    * Since 1.0.16, several bugs have been found and solved by Don Brown (of [http://struts.apache.org/flow/ Apache Struts Flow]) and BJessen.  
    * Also, added a defined() function and optional ${% expr %} syntax.
@@ -85,7 +85,7 @@ Next, here is a sample JST template that could 'render' that data.  We've put ou
     {/if}
   </textarea>
 }}}
-Here's some code that shows ways to do template processing with the [wiki:JavaScriptTemplateAPI API]...
+Here's some code that shows ways to do template processing with the [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API]...
 {{{
   <script language="javascript">
     // The one line processing call...
@@ -168,4 +168,4 @@ Alternatively, you might keep *.jst files on your web server and load them into 
 We designed JST to run in a web browser AND also in any standalone !JavaScript interpreter (such as Mozilla Rhino or Spider Monkey).  The core JST engine is meant to have no critical DOM/DHTML/browser dependencies.
 
 ----
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }

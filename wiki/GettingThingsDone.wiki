@@ -8,7 +8,7 @@ Read up about it:
 See also: ''''
 
 
- * [wiki:NextAction Next Action] 
- * [wiki:HipsterTabletPc Hipster Tablet PC] 
- * [http://shared.snapgrid.com/gtd_tiddlywiki.html GTDTiddlyWiki] -- an inspiration for [wiki:NextAction Next Action] 
+ * [http://code.google.com/p/trimpath/wiki/NextAction Next Action] 
+ * [http://code.google.com/p/trimpath/wiki/HipsterTabletPc Hipster Tablet PC] 
+ * [http://shared.snapgrid.com/gtd_tiddlywiki.html GTDTiddlyWiki] -- an inspiration for [http://code.google.com/p/trimpath/wiki/NextAction Next Action] 
 

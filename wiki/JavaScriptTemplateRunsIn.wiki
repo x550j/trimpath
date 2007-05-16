@@ -1,14 +1,14 @@
 = JavaScript Templates Browser Compatibility =
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
 
 Does JST work everywhere?  Here's what we know...
 
 || '''Environment''' || '''Runs?''' || '''Notes''' ||
-|| Linux - Mozilla Firefox 1.0 || yes || [wiki:mikeg mikeg] ||
+|| Linux - Mozilla Firefox 1.0 || yes || [http://code.google.com/p/trimpath/wiki/mikeg mikeg] ||
 || Linux - Konqueror 3.2.3 || yes || MichelBertier ||
-|| FreeBSD - Mozilla Firefox 1.0  || yes || [wiki:mikeg mikeg] ||
-|| FreeBSD - Mozilla Firefox 1.1  || yes || [wiki:mikeg mikeg] ||
-|| Mac OS X - Safari 1.2.3 (v125.12) || yes  || preliminary test - [wiki:mikeg mikeg] ||
+|| FreeBSD - Mozilla Firefox 1.0  || yes || [http://code.google.com/p/trimpath/wiki/mikeg mikeg] ||
+|| FreeBSD - Mozilla Firefox 1.1  || yes || [http://code.google.com/p/trimpath/wiki/mikeg mikeg] ||
+|| Mac OS X - Safari 1.2.3 (v125.12) || yes  || preliminary test - [http://code.google.com/p/trimpath/wiki/mikeg mikeg] ||
 || Windows - Internet Explorer 5.0 || no || TrimPath and regex replace errors - Chris ||
 || Windows - Internet Explorer 6.0 || yes || SteveYen ||
 || Windows - Mozilla Firefox 1.0 || yes || my main browser - SteveYen ||
@@ -17,4 +17,4 @@ Does JST work everywhere?  Here's what we know...
 
 
 ----
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }

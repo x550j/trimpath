@@ -1,5 +1,5 @@
 = JavaScript Template Standard Modifiers =
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
 
 The !JavaScript Template engine includes several standard modifiers, which are used to modify the output of expressions.  For example, the capitalize modifer is used like: ${customer.countryName|capitalize} 
 
@@ -15,7 +15,7 @@ ${whatever_expresion| modifier}  //BROKEN
 }}}
 ...that bar has got to be right up against the modifier name
 
-See the [wiki:JavaScriptTemplateSyntax syntax] page for how to use modifiers and the [wiki:JavaScriptTemplateAPI API] page for how to add your own custom modifiers.
+See the [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] page for how to use modifiers and the [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] page for how to add your own custom modifiers.
 
  * '''capitalize'''
    * This modifier capitalizes all the letters in the string, using String.prototype.toUpperCase()
@@ -81,7 +81,7 @@ Anyhow, though it's pretty straightforward, here's my hashmerge() code:
 }}}
 
 ----
-Do you want more modifiers?  Please make [wiki:JavaScriptTemplateDiscussion suggestions].  Or, perhaps you'd like to [wiki:HowToContribute contribute] your own custom modifiers?  
+Do you want more modifiers?  Please make [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion suggestions].  Or, perhaps you'd like to [http://code.google.com/p/trimpath/wiki/HowToContribute contribute] your own custom modifiers?  
 
 ----
-{ [wiki:JavaScriptTemplates JavaScript Templates (JST) home] | [wiki:JavaScriptTemplateAPI API] | [wiki:JavaScriptTemplateSyntax syntax] | [wiki:JavaScriptTemplateModifiers modifiers] | [wiki:TrimPathDownload download] | [wiki:JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }

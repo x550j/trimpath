@@ -1,14 +1,14 @@
 = TrimSpreadsheet =
-{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
 
-'''TrimSpreadsheet''' is a lightweight [wiki:TrimPathLicense open-source] !JavaScript spreadsheet engine.  It let's you work with spreadsheet data right in your web browser.  As with all !TrimPath components, the '''TrimSpreadsheet''' engine is written as 100% standards-based !JavaScript and CSS.  Spreadsheets are stored as HTML <table> markup, so it's easy to understand and embed into your own web pages.  Merely assign a class of "spreadsheet" to your <table>, and the !TrimSpreadsheet engine will do the rest.  Anyone familiar with CSS can also easily create their own spreadsheet themes.
+'''TrimSpreadsheet''' is a lightweight [http://code.google.com/p/trimpath/wiki/TrimPathLicense open-source] !JavaScript spreadsheet engine.  It let's you work with spreadsheet data right in your web browser.  As with all !TrimPath components, the '''TrimSpreadsheet''' engine is written as 100% standards-based !JavaScript and CSS.  Spreadsheets are stored as HTML <table> markup, so it's easy to understand and embed into your own web pages.  Merely assign a class of "spreadsheet" to your <table>, and the !TrimSpreadsheet engine will do the rest.  Anyone familiar with CSS can also easily create their own spreadsheet themes.
 
 == Demos ==
 Want to see !TrimSpreadsheet in action?  Here's some demos...
  * [http://trimpath.com/demos/test1/trimpath/spreadsheet_demo0.html software analysis spreadsheet].
  * [http://trimpath.com/demos/test1/trimpath/spreadsheet_demo1.html product comparison spreadsheet].
  * [http://trimpath.com/demos/test1/trimpath/spreadsheet_blank.html blank spreadsheet].
-Note: these demos run the latest, most featureful development code.  Please see the [wiki:TrimPathDownload download] page if you want a stable prior release.
+Note: these demos run the latest, most featureful development code.  Please see the [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] page if you want a stable prior release.
 
 == Features ==
  * Formulas.
@@ -39,10 +39,10 @@ Note: these demos run the latest, most featureful development code.  Please see 
      * Resizable Rows & Columns through mouse dragging.
 
 == More information ==
- * [wiki:TrimSpreadsheetBasicPrimer A Basic Primer To Using TrimSpreadsheet]
- * [wiki:TrimPathDownload TrimSpreadsheet Downloads]
- * [wiki:TrimSpreadsheetDiscussion TrimSpreadsheet Community Wiki]
- * [wiki:TrimSpreadsheetRunsIn TrimSpreadsheet Browser Compatibility]
+ * [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetBasicPrimer A Basic Primer To Using TrimSpreadsheet]
+ * [http://code.google.com/p/trimpath/wiki/TrimPathDownload TrimSpreadsheet Downloads]
+ * [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion TrimSpreadsheet Community Wiki]
+ * [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetRunsIn TrimSpreadsheet Browser Compatibility]
 
 ----
-{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }

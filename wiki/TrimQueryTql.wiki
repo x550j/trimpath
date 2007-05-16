@@ -1,6 +1,6 @@
 = TrimQuery Language (TQL) =
 
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }
 
 If you want to experiment and get under the hood of !TrimQuery, then let's take a closer look at the !TrimQuery Language (TQL).  TQL is accessed through the queryLang Object that is returned by ''!TrimPath.makeQueryLang()''. 
 
@@ -337,4 +337,4 @@ Features of SQL SELECT that are not (yet?) supported in TQL include...
 [ SteveYen: Please don't hesitate to jump right with your own implementations or contributions in if you wish.  There's nothing like implementing a small SQL-like engine to helping one's understanding and appreciation for SQL! ]
 
 ----
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }

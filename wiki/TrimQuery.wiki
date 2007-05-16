@@ -1,7 +1,7 @@
 = TrimQuery =
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }
 
-For rich web application developers, the '''TrimQuery''' engine from TrimPath is a lightweight [wiki:TrimPathLicense GPL open-source] component that lets you have the power of SQL queries while running in a web browser.  
+For rich web application developers, the '''TrimQuery''' engine from TrimPath is a lightweight [http://code.google.com/p/trimpath/wiki/TrimPathLicense GPL open-source] component that lets you have the power of SQL queries while running in a web browser.  
 
 Here's an online [http://trimpath.com/demos/test1/trimpath/query_demo.html demo].
 
@@ -44,11 +44,11 @@ Or worse, you could manually write tons of code to search, join, group-by, aggre
 
 More information:
  * '''10 Minute Introduction''' -- see below.
- * [wiki:TrimQueryAPI TrimQuery API]
- * [wiki:TrimQuerySyntax TrimQuery SQL Syntax]
- * [wiki:TrimPathDownload TrimQuery Downloads]
- * [wiki:TrimQueryDiscussion TrimQuery Community Wiki]
- * [wiki:TrimQueryRunsIn TrimQuery Browser Compatibility]
+ * [http://code.google.com/p/trimpath/wiki/TrimQueryAPI TrimQuery API]
+ * [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax TrimQuery SQL Syntax]
+ * [http://code.google.com/p/trimpath/wiki/TrimPathDownload TrimQuery Downloads]
+ * [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion TrimQuery Community Wiki]
+ * [http://code.google.com/p/trimpath/wiki/TrimQueryRunsIn TrimQuery Browser Compatibility]
  * [http://trimpath.com/demos/test1/trimpath/query_demo.html TrimQuery demo page]
 
 == 10 Minute Introduction To TrimQuery ==
@@ -88,7 +88,7 @@ We also create some structured !JavaScript to define our tables (or schema)...
     };
   </script>
 }}}
-Next we define and execute a query using the [wiki:TrimQueryAPI API]...
+Next we define and execute a query using the [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API]...
 {{{
   <script language="javascript">
     // First we precompile the query language object with the schema...
@@ -125,7 +125,7 @@ And the value of the results variable would be...
 
 You can try this right now using the online [http://trimpath.com/demos/test1/trimpath/query_demo.html TrimQuery demo]
 
-If you want to convert the results into HTML or into a fragment of HTML, take a look at TrimPath's [wiki:JavaScriptTemplates JavaScript Templates] technology.  The JST component lets you have template based programming (like PHP/ASP/JSP) but runs entirely in your web browser.
+If you want to convert the results into HTML or into a fragment of HTML, take a look at TrimPath's [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] technology.  The JST component lets you have template based programming (like PHP/ASP/JSP) but runs entirely in your web browser.
 
 Here's another query that shows off GROUP BY, HAVING, SUM, aliases, and parameters...
 {{{
@@ -145,4 +145,4 @@ Here's another query that shows off GROUP BY, HAVING, SUM, aliases, and paramete
 We designed TrimQuery to run in a web browser AND also in any standalone !JavaScript interpreter (such as Mozilla Rhino or Spider Monkey).  The core TrimQuery engine is meant to have no critical DOM/DHTML/browser dependencies.
 
 ----
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }

@@ -1,5 +1,5 @@
 = TrimQuery API =
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }
 
 == Using TrimQuery ==
 First, in your HTML/JSP/PHP/ASP file, include the trimpath/query.js !JavaScript file.
@@ -64,9 +64,9 @@ selectStatement = queryLang.parseSQL(
                       "AND Customer.acctBalance < ?", [ minBalance, maxBalance ]);
 }}}
 
-Please see the [wiki:TrimQuerySyntax query language syntax] page for more information on the specific subset of SQL SELECT syntax that's supported by the parseSQL() method.
+Please see the [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax query language syntax] page for more information on the specific subset of SQL SELECT syntax that's supported by the parseSQL() method.
 
-If you're interested in the underlying parse language implementation of TrimQuery, please see [wiki:TrimQueryTql TrimQuery TQL].
+If you're interested in the underlying parse language implementation of TrimQuery, please see [http://code.google.com/p/trimpath/wiki/TrimQueryTql TrimQuery TQL].
 
 ----
 == selectStatement Object ==
@@ -106,4 +106,4 @@ For example...
 The '''selectStatement.toString()''' method returns a String of the SQL text that represents the selectStatement Object.  This SQL string is meant to be legal SQL and is often used as a debugging aid.
 
 ----
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }

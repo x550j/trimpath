@@ -1,5 +1,5 @@
 = TrimQuery SQL Syntax =
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }
 
 The queryLang.parseSQL() method supports a subset of the SQL SELECT syntax.
 
@@ -17,9 +17,9 @@ Here are the rules:
  * No expressions in the columns list.  
    * Except for simple aggregate functions like COUNT(), SUM(), and AVG()
    * For example, the following won't work: SELECT Invoice.total / 1000.0 AS total FROM Invoice.
-   * You'll have to do your complex math outside of !TrimQuery, or use [wiki:TrimQueryTql TQL syntax].
+   * You'll have to do your complex math outside of !TrimQuery, or use [http://code.google.com/p/trimpath/wiki/TrimQueryTql TQL syntax].
  * No outer joins.
-   * If you really want to do a left outer join, you'll have to use [wiki:TrimQueryTql TQL syntax].
+   * If you really want to do a left outer join, you'll have to use [http://code.google.com/p/trimpath/wiki/TrimQueryTql TQL syntax].
  * No ON ot USING join support.
    * You'll instead have to do your joins in the WHERE clause.
  * Variable placeholders are specified with a ? character.
@@ -106,4 +106,4 @@ Features of SQL SELECT that are not (yet?) supported...
 [ SteveYen: Please don't hesitate to jump right with your own implementations or contributions in if you wish.  There's nothing like implementing a small SQL-like engine to helping one's understanding and appreciation for SQL! ]
 
 ----
-{ [wiki:TrimQuery TrimQuery home] -- [wiki:TrimQueryAPI API] | [wiki:TrimQuerySyntax syntax] | [wiki:TrimPathDownload download] | [wiki:TrimQueryDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }

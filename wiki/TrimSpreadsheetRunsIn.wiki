@@ -1,5 +1,5 @@
 = TrimSpreadsheet Browser Compatibility =
-{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
 
 Does TrimSpreadsheet work everywhere?  Here's what we know...
 
@@ -24,4 +24,4 @@ The code that calls that function assumes it returns null if there is no formula
 However, I can see the same assumption is made in many other places..
 
 ----
-{ [wiki:TrimSpreadsheet TrimSpreadsheet home] -- [wiki:TrimPathDownload download] | [wiki:TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }

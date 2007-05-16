@@ -6,7 +6,7 @@
 We'll keep these community discussion wiki pages around, though, for reference.  -- SteveYen 2005/07/10
 
 ----
-This is an open wiki page to discuss the [wiki:NextAction Next Action] tool.  Looking for your rants, feedback, questions, ideas, suggestions... -- SteveYen
+This is an open wiki page to discuss the [http://code.google.com/p/trimpath/wiki/NextAction Next Action] tool.  Looking for your rants, feedback, questions, ideas, suggestions... -- SteveYen
 
 ----
 
