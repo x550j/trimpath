@@ -14,5 +14,5 @@ AND, by popular demand, [http://code.google.com/p/trimpath/wiki/JavaScriptTempla
 Answer: we're lazy and we are not lawyers.  We might revisit this once we get some time, but of course the GPL will be in effect by then for everything already "in the wild".  Please add your suggestions, reasoning and feedback on licensing to the TrimPathLicenseDiscussion.
 
  * Can I get a commercial, non-GNU license?
-   * Sure, you can be the first one in the world to help me figure out if so-called "dual licensing" makes sense for !TrimPath.  Just give me a buzz and I'm open to talk...  steve Dot yen At metaha Dot com
+   * Sure, you can be the first one in the world to help me figure out if so-called "dual licensing" makes sense for !TrimPath.  Just give me a buzz and I'm open to talk...  steve Dot yen At trimpath Dot com
    * Also, since [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] is now also available under Apache License, that hopefully answers the this non-GNU license issue.  That should let me get back to coding.  Template away and enjoy!  -- Steve Yen 2005/02/28
