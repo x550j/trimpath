@@ -1,0 +1,72 @@
+= Next Action =
+
+Next Action is a [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] todo-list tracking tool. It's a personal database for your GTD info.
+
+== Features Include: ==
+ * Free and Open Source.
+ * Fast and snappy.
+ * Easy to use.
+ * It runs on your computer, so you can use it when you're not connected online.
+
+== Get started: ==
+You can see and get Next Action at: http://trimpath.com/demos/nextaction_static1/nextaction.htm
+
+Next, to get your own copy, just save Next Action to your computer (use the 'File -> Save Page As...' command in your browser).  Please, please use Firefox!  If you're into time-saving productivity tools like Getting Things Done, you know you should be using Firefox already.  Be sure to use 'Save as type:' of 'Web Page, complete', which will actually save an .htm file and a directory of any associated files (stylesheets, javascripts, etc).
+
+Open up your newly saved, local .htm file into your browser. Now you're working with a local app and local data.
+
+You can create your own actions from the Actions page.
+
+When editing or creating an Action, you can optionally associate a Context and/or a Project to each Action.  
+ * An Action is a small task, like 2 to 5 minutes.  
+ * A Context is a place or environment which has tools which you need in order to get your Actions done, such as at your office or at your computer.  
+ * A Project let's you group many related Actions together to accomplish a big task or goal.
+
+You can use the Dashboard page to get a concise overview of your remaining actions.
+
+The Dashboard page is also great for printing out as an action cheatsheet for when you're on the go. You can also output easily to your [http://code.google.com/p/trimpath/wiki/HipsterTabletPc Hipster Tablet PC]
+
+Don't forget to save your work early and often by using 'File -> Save Page As...'. The Next Action tool doesn't (yet) save changes to disk automatically.
+
+Also, if you want to start from a clean database, go to the 'about' page, which has a Delete All Records button.
+
+== Software Required: ==
+Firefox 1.0+. This beta version will somewhat run in the IE 6.0+, too, but it's best right now just doing view or read-only operations. Opera and Safari is not supported (yet).
+
+== What is 'show me the code'? ==
+Next Action is a [http://code.google.com/p/trimpath/wiki/SinglePageApplicationAndDevelopmentEnvironment SPADE] application, meaning it is a single page application that includes a built-in development environment. So, you can customize and tailor Next Action to your exact needs, without needing any other software.
+
+If you know Ruby On Rails, you should be right at home with the [http://code.google.com/p/trimpath/wiki/TrimJunction Junction MVC framework] that was used to build Next Action. It's also a frictionless way to get familiar with Rails-like concepts, without having to learn Ruby.
+
+== Arrgh, I keep hitting the Back button! ==
+(...and losing my changes!)
+
+One answer: just pop open your local Next Action file in a brand new tab every morning.  The result is that your Back and Forward commands will remain disabled.  Accidentally trying to go Back/Forward on that tab will have no effect.
+
+By the way, you can also setup Firefox to [http://www.lifehacker.com/software/productivity/how-to-set-up-multiple-homepages-in-firefox-104939.php pop open multiple tabs on startup], so your mornings can be even faster.
+
+== How To I Upgrade? ==
+This [http://trimpath.com/forum/viewtopic.php?id=8 page] describes how to upgrade to the latest version of Next Action.
+
+== Feedback? Suggestions? Ideas? ==
+Try the [http://trimpath.com/forum Forum].  Or the wiki [http://code.google.com/p/trimpath/wiki/NextActionDiscussion page].
+
+== Mentions ==
+ * "This has to be one of the coolest applications I've ever seen." - Asa Dotzler
+   * http://weblogs.mozillazine.org/asa/archives/008473.html
+ * "Incredible Javascript-driven GTD app" - neilio
+   * http://groups-beta.google.com/group/43Folders/browse_thread/thread/837efcc34a270a3f
+ * On 43 Folders...
+   * http://www.43folders.com/2005/07/nextaction_gtd_.html
+ * On lifehack.org...
+   * http://www.lifehack.org/articles/lifehack/next-action-a-web-based-getting-things-done-todo-list.html
+ * "Next Action is brilliant!"
+   * http://trimpath.com/forum/viewtopic.php?id=30 
+ * From delicious... 
+   * "This web application functions completely from the browser and thus can be locally saved. Amazing!"
+   * "Wonderful JavaScript-powered GTD tool"
+   * "like tiddlywiki but different"
+ * Doh!...
+   * "Hmm.... I don't get it."
+   * "Don't you know IE has 95% browser share?!"
+   * "Nope, never heard of 'Gettings Things Done'"
