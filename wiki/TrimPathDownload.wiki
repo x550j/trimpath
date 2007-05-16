@@ -6,6 +6,8 @@ TrimPath follows an even/odd release numbering scheme.  Even numbers are public 
 
 *Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access the downloads.*
 
+------------------------------------------------
+
 == JavaScript Templates ==
 About [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates]
 
