@@ -8,6 +8,6 @@ Also, I've started exploring [http://rubyonrails.com Ruby on Rails].
 
 I hear I must keep my New Year's resolutions secret if they are to come true.
 
-My electronic post box is at steve Dot yen At metaha Dot com
+My electronic post box is at steve Dot yen At trimpath Dot com
 
 -- SteveYen
