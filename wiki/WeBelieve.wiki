@@ -1,4 +1,4 @@
-http://code.google.com/p/trimpath/wiki/= We Believe =
+= [http://code.google.com/p/trimpath/wiki/WeBelieve We Belive] =
 
 == We believe in pragmatic elegance. ==
 
@@ -20,5 +20,4 @@ It's about sharing, in giving back.  It's about friends, about having fun.  Henc
 
 ----
 But, we still want to feed our families, pay the mortgage.  What a conundrum!  Got any [http://code.google.com/p/trimpath/wiki/TrimPathCommunity suggestions]?
-
 
