@@ -9,6 +9,7 @@
 Here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
 
 == News ==
+ * 2007/06/25 - Rails on JS forthcoming by Steve Yegge - http://www.iunknown.com/2007/06/steve-yegge-por.html
  * 2005/07/18 - New Release - 1.0.38
  * 2005/07/06 - A new demo app is available, called [http://code.google.com/p/trimpath/wiki/NextAction Next Action]
 
