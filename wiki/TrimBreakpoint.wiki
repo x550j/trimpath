@@ -3,7 +3,7 @@
 
 '''TrimBreakpoint''' is a super lightweight debugging utility for JavaScript, to temporarily stop code execution so that you can inspect browser variables at runtime, including any variable in scope.  It's meant for when you're too lazy to pull out your [http://www.svendtofte.com/code/learning_venkman/ Venkman] or Visual Studio and when those alert()'s just aren't doing enough for you.
 
-Note: TrimBreakpoint was written before [http://www.getfirebug.com Firebug] sprang to wonderous life.  If you're on Firefox, use Firebug. If you're on IE without any other tools, on the other hand... shrug.
+Note: TrimBreakpoint was written before [http://www.getfirebug.com Firebug] sprang to wonderous life.  If you're on Firefox, use Firebug.  It has a great debugger/breakpoint feature, amongst many others.  If you're on IE without any other tools, on the other hand... shrug.
 
 Here's a [http://trimpath.com/demos/test1/trimpath/breakpoint_demo.html demo for TrimBreakpoint]
 
