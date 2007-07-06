@@ -21,6 +21,23 @@ GuestBookController = function() {
 GuestBookController.layoutName = 'main';
 }}}
 
+Alternatively, if you want to use a prototype based programming idiom...
+{{{
+GuestBookController = function() {}
+
+GuestBookController.prototype.index = function(req, res) {
+    res.entries = Entry.findAll();
+}
+
+GuestBookController.prototype.sign = function(req, res) { 
+    Entry.newInstance(req['entry']);
+    res.redirectToAction('index');
+}
+
+GuestBookController.layoutName = 'main';
+}}}
+
+
 All actions assume that you want to render a template matching the name 
 of the action at the end of the performance unless you tell it otherwise. 
 The index action complies with this assumption, so after populating the @entries 
