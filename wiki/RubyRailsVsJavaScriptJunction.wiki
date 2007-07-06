@@ -28,7 +28,7 @@ class Milestone < ActiveRecord::Base
   has_many :todo_lists
 
   def self.find_recent_by_project(project_id, date)
-    Milestone.find_all ["project_id = ? AND created_at > ?", project_id, date]
+    Milestone.find('all', :conditions => ["project_id = ? AND created_at > ?", project_id, date]
   end
 end
 }}}
@@ -48,8 +48,9 @@ with (modelFor('Milestone')) {
 }
 
 Milestone.findRecentByProject = function(projectId, date) {
-    return Milestone.findAll("Milestone.projectId = ? AND Milestone.createdAt > ?",
-                             [ projectId, date ]);
+    return Milestone.find('all', { 
+        conditions: [ "Milestone.projectId = ? AND Milestone.createdAt > ?,
+                      projectId, date ] });
 }
 }}}
 
