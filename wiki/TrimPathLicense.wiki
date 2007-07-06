@@ -1,8 +1,6 @@
 = Trim Path Component License =
 
-All TrimPath components are licensed with the [http://trimpath.com/legal/gpl.txt GNU Public License] version 2, or, at your option, any later version of the GNU Public License.
-
-AND, by popular demand, [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] is now also dual-licensed under the Apache License, Version 2.0.  -- Steve Yen 2005/03/02.
+All TrimPath components are licensed with the [http://trimpath.com/legal/gpl.txt GNU Public License] version 2, or, at your option, under the Apache License, Version 2.0.
 
 == License FAQ ==
  * Why GNU GPL?
