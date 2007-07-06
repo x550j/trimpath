@@ -1,10 +1,8 @@
-= [http://code.google.com/p/trimpath/wiki/WeBelieve We Belive] =
-
 == We believe in pragmatic elegance. ==
 
 The community here is about technology.  About code.  So let's make beautiful, useful technology and code.
 
-== We believe in lightness and orthogonality. ==
+== We believe in web-based lightness and orthogonality. ==
 
 !TrimPath should not be one giant bolus of monolithic library.  !TrimPath components should be individually consumable by developers.  We're a'la carte, loosely joined.  Avoid tangles that require folks to drag in the whole shebang.
 
