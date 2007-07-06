@@ -16,21 +16,23 @@ Here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki
 
 == Vision ==
 
-In a nutshell: mindlessly copy and port Rails, because it's a great web MVC framework.  The result should be a web MVC framework that runs in either the client AND the server.  While we're at it, explore and push the edges of occasionally connected web applications.
+In a nutshell: mindlessly copy Rails when possible, because it's a great web MVC framework.  Next, riff on Rails to allow for doing cool, non-Rails maneuvers that are only possible with JavaScript.
+
+The result should be a web MVC framework that runs in either the client AND the server.  While we're at it, explore and push the edges of occasionally connected web applications.
 
 Long version:
 
-With an eye towards [http://code.google.com/p/trimpath/wiki/DontRepeatYourself Don't Repeat Yourself], spiced up with a little bit of Ajax, the grand vision of the !TrimPath Junction project is to be able to write web application logic just once, in familiar languages like !JavaScript.
+With an eye towards [http://code.google.com/p/trimpath/wiki/DontRepeatYourself Don't Repeat Yourself], spiced with a little Ajax, the grand vision of the !TrimPath Junction project is to be able to write web application logic just once, in familiar languages like !JavaScript.
 
 A Junction-based web application should run, validate input, process data, generate output and do its thing on both the server AND the client.  We use the Rhino !JavaScript runtime for the server and use your favorite, modern web browser for the client.
 
 If you know Rails, then Junction will be very familiar stuff.  Maybe you can help the Junction project to grow up.
 
-If you know !JavaScript, then all the good things you've been hearing about Rails is now becoming available to you through the Junction project.  Except, you don't need to learn yet another programming language.  You just need to re-learn !JavaScript, casting aside your old stereotypes and misconceptions about the language.
+If you know !JavaScript, then all the good things you've been hearing about Rails is now becoming available to you through the Junction project.  Except, you don't need to learn yet another programming language.
 
-With Junction, you still need to know HTML, DHTML, CSS, and SQL.  You still need to know about HTTP, cookies, and sessions.  Junction doesn't hide these things from you and magically turn your web browser into the next Visual Basic IDE.
+With Junction, you still need to know HTML/DHTML, DOM, CSS, and SQL.  You still need to know about HTTP, cookies, and sessions.  Junction doesn't hide these things from you and magically turn your web browser into the next Visual Basic IDE.  Junction believes in fealty to web standards.
 
-But, you will probably need to learn about offline, occasionally connected databases and application design.  Junction deviates from its Rails roots in pushing on this feature area.  Think synchronization and poor (really destitute) man's Notes or Groove.  This is the key new area that Junction explores and aspires to push forward.
+But, you will probably need to learn about offline, occasionally connected databases and application design.  Junction deviates from its Rails roots in pushing on this feature area.  Think synchronization and poor (really destitute) man's Notes or Groove.  Junction aims to provide a web-standards-based reincarnation of Notes or Groove.  This is the key new area that Junction explores and aspires to push forward.
 
 Junction, like Rails, also stays out of your way.  If you need to specify HTML down to the Nth degree, you can.  If you want to bring in more web GUI widgets (like from Dojo Toolkit or htmlArea or Flash or Prototype), you can.  Junction is a web Model-View-Controller (MVC) framework, not about hiding JavaScript or the DOM model.
 
@@ -38,20 +40,20 @@ Junction, like Rails, also stays out of your way.  If you need to specify HTML d
 
 Here's how MVC appears in Junction.
 
- * '''Model''' - in the Junction world, these are just a plain old !JavaScript 'classes'.  Actually, that means these are just plain old !JavaScript functions, and they follow the [http://www.martinfowler.com/eaaCatalog/activeRecord.html Active Record pattern] of object-relational mapping.  Fancy queries are done using SQL, even when offline or disconnected from the server.  We use the TrimQuery project to allow SQL to run in a (possibly disconnected) web browser data cache.
+ * '''Model''' - in the Junction world, these are just a plain old !JavaScript 'classes'.  Actually, that means these are just plain old !JavaScript functions, and they follow the [http://www.martinfowler.com/eaaCatalog/activeRecord.html Active Record pattern] of object-relational mapping.  Fancy queries are done using SQL, even when offline or disconnected from the server.  We use the TrimQuery project and Google Gears RDBMS to allow SQL to run in a (possibly disconnected) web browser data cache.
 {{{
-BlogPost = function() {
-}
+BlogPost = function() {}
+
 with (modelFor('BlogPost')) {
     hasMany('Comments)
 }
 
 BlogPost.findByShortName = function(shortName) {
-    return BlogPost.findFirst("BlogPost.shortName = ?", shortName);
+    return BlogPost.find("first", { conditions: ["BlogPost.shortName = ?", shortName] });
 }
 }}}
 
- * '''View''' - these are [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] (JST).  The JST engine is another project of the !TrimPath effort.  JST templates should be familiar to anyone who knows other HTML templating markup syntax, like PHP, JSP, ASP, !FreeMarker, Velocity, Smarty, ERb.
+ * '''View''' - these are [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates] (JST).  The JST engine is another project of the !TrimPath effort.  JST templates should be familiar to anyone who knows other HTML templating markup syntax, like PHP, !FreeMarker, Velocity, Smarty.
 {{{
 <div>
   Comments...
@@ -64,10 +66,23 @@ BlogPost.findByShortName = function(shortName) {
 </div>
 }}}
 
+Alternatively, if you like rhtml/ERb/JSP style syntax, Junction can also use EcmaScriptTemplates.  For example...
+{{{
+<div>
+  Comments...
+  <ul>
+    <% for (var comments = blogPost.getComments(),
+                i = 0; i < comments.length; i++) { %>
+      <li><span><%= comments[i].author %> says...</span>
+          <div><%= comments[i].body %></div></li>
+    <% } %>
+  </ul>
+</div>
+}}}
+
  * '''Controller''' - these are also just plain old !JavaScript functions.  Notice that Junction supports scaffolding, just like with Rails...
 {{{
-BlogPostController = function() {
-}
+BlogPostController = function() {}
 
 scaffold(BlogPostController, 'BlogPost')
 }}}
@@ -103,9 +118,6 @@ It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/
      * Junction uses the Prototype library from Sam Stephenson for Ajax and DOM animation effects.
    * [http://groove.net Groove Networks]
    * [http://code.google.com/p/trimpath/wiki/JsonLibrary JSON]
-
-----
-There's more to come... If you're impatient, just go read the Ruby on Rails documentation, and mentally convert everything into camelCase syntax.  For example, link_to and redirect_to_action become linkTo() and redirectToAction().
 
 ----
 { [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
