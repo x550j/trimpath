@@ -6,8 +6,7 @@ Junction decorates your functions and prototypes dynamically.  It's like aspect-
 
 For example, let's take a look at the code for a sample Milestone model object, which could be part of a Project-Milestone tracking application...
 {{{
-function Milestone() {
-}
+function Milestone() {}
 
 with (modelFor('Milestone')) {
     belongsTo('Creator',  { modelName : 'Person' });
@@ -19,19 +18,21 @@ with (modelFor('Milestone')) {
 }
 
 Milestone.findRecentByProject = function(projectId, date) {
-    return Milestone.findAll("Milestone.projectId = ? AND Milestone.createdAt > ?",
-                             [ projectId, date ]);
+    return Milestone.find('all', {
+      conditions: [ "Milestone.projectId = ? AND Milestone.createdAt > ?",
+                    projectId, date ] });
 }
 }}}
 
 When '''modelFor()''' is invoked, Junction knows that the Milestone function is to be a model object in the Model-View-Controller sense.  The '''modelFor()''' function performs the following...
- * It associates the string 'Milestone' with the Milestone function.  
+ * It associates the model name string 'Milestone' with the Milestone function.  
  * It assumes the plural name is 'Milestone' + 's', or 'Milestones'.  
    * This is overridable using the pluralName() function.
  * It assumes the database table name is 'Milestone'.  
    * This is overridable using the tableName() function.
  * It adds some functions or methods to the Milestone function object, such as...
    * Milestone.find()
+   * Milestone.findActive()
    * Milestone.findAll()
    * Milestone.findFirst()
    * Milestone.findBySql()
