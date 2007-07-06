@@ -13,6 +13,7 @@ A collection of bad things about JavaScript, such as buggy language implementati
    * '''!ActionScript does not support dynamic regular expressions using the RegExp object'''.
    * http://livedocs.macromedia.com/flash/mx2004/main_7_2/wwhelp/wwhimpl/common/html/wwhelp.htm?context=Flash_MX_2004&file=00000756.html#comments
    * These issues will make it very very hard to impossible to get TrimPath technology to work in Flash/!ActionScript.
+     * Maybe things have changed, though, in Flash 8 or beyond (Apollo/AIR)
  * Laszlo implementation of !EcmaScript...
    * Documented differences can be found [http://www.laszlosystems.com/lps-2.2/docs/guide/ecmascript-and-lzx.html#ecmascript-and-lzx.differences here].
    * Laszlo !EcmaScript limitations might be same as !ActionScript limitations (since Laszlo deploys to Flash runtime)?
