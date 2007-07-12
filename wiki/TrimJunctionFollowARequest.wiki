@@ -1,4 +1,4 @@
-= Follow A Request Through TrimPath Junction =
+= Follow A Request Through Junction =
 
 { [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
 
