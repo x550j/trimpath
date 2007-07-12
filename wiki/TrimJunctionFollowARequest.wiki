@@ -1,5 +1,6 @@
 = Follow A Request Through TrimPath Junction =
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
+
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
 
 For web application developers, let's follow a request through the [http://code.google.com/p/trimpath/wiki/TrimJunction Junction] Model-View-Controller framework.  That is, what happens when a user clicks on a hyperlink in a Junction application...
 
@@ -121,4 +122,4 @@ The final result of layout rendering is now displayed by the browser.
 Finally, you may have also noticed, in order to generate the hyperlinks, the template uses the linkToLocal() function.  This brings us back to the start and completes this article.
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
