@@ -1,6 +1,6 @@
 = Next Action =
 
-Next Action is a [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] todo-list tracking tool. It's a personal database for your action items and todo lists.
+Next Action is a [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] todo-list tracking tool. It's a personal database for your action items and todo lists that you use through your web browser.
 
 == Features Include: ==
  * Fast and snappy.
@@ -46,4 +46,3 @@ Try the [http://trimpath.com/forum Forum].
    * "This web application functions completely from the browser and thus can be locally saved. Amazing!"
    * "Wonderful JavaScript-powered GTD tool"
    * "like tiddlywiki but different"
-
