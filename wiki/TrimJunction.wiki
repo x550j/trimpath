@@ -10,6 +10,7 @@
 Here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
 
 == News ==
+ * 2007/07/12 - After two years, [http://trimpath.com/blog/?p=69 Junction and Next Action finally get updated].
  * 2007/07/12 - New API docs online at http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html
  * 2007/07/06 - [http://trimpath.com/blog/?p=53 Google Gears is the missing link to Junction]!
  * 2007/06/25 - Rails on JS forthcoming by Steve Yegge - http://www.iunknown.com/2007/06/steve-yegge-por.html
