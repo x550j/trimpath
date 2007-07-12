@@ -1,4 +1,4 @@
-= Next Action, Personal Edition 0.80 =
+= Next Action, Personal Edition =
 
 Next Action is a [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] todo-list tracking tool. It's a personal database for your action items and todo lists that you use through your web browser.
 
