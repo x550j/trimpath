@@ -1,6 +1,6 @@
 = How Does Junction Work =
 
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
 
 Junction decorates your functions and prototypes dynamically.  It's like aspect-oriented-programming.  The decorating happens at the moment when you give Junction any meta information or declarations about your application.  
 
@@ -54,4 +54,4 @@ Back to the sample Milestone code, when the '''belongsTo()''' declaration functi
 Similarly, when the '''hasMany()''' declaration function is called, such as ''hasMany('Messages')'', Junction adds methods to the Milestone.prototype object such as getMessages().
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
