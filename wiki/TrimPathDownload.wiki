@@ -39,6 +39,7 @@ About TrimQuery
 About TrimJunction
 
 || Release || Date || Info ||
+|| 1.1.2 || 2007/07/12 || ||
 || 1.0.38 || 2005/07/18 || ||
 
 == TrimSpreadsheet ==
