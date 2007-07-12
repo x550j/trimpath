@@ -1,7 +1,6 @@
 = TrimJunction =
 
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | 
-[http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | 
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | 
 [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
 
 '''!TrimPath Junction''' is a clone or port of the terrific [http://www.rubyonrails.com/ Ruby on Rails] web MVC framework into !JavaScript.
@@ -124,4 +123,4 @@ It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/
    * [http://code.google.com/p/trimpath/wiki/JsonLibrary JSON]
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
