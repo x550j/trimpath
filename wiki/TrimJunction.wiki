@@ -1,6 +1,8 @@
 = TrimJunction =
 
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] | 
+[http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | 
+[http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
 
 '''!TrimPath Junction''' is a clone or port of the terrific [http://www.rubyonrails.com/ Ruby on Rails] web MVC framework into !JavaScript.
 
@@ -91,6 +93,7 @@ scaffold(BlogPostController, 'BlogPost')
 It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html convention, not configuration].  That is, if you just follow the naming conventions, there are no configuration files.  The Junction framework favors reflection and late-bound dynamic object extensions.  The result is less code, no recompilation steps, and faster development.
 
 == Links ==
+ * [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html Junction Documentation]
  * [http://code.google.com/p/trimpath/wiki/TrimJunctionDemo Online Junction Demo]
  * [http://code.google.com/p/trimpath/wiki/TrimJunctionHowItWorks How Does Junction Work]
  * [http://code.google.com/p/trimpath/wiki/TrimJunctionFollowARequest Follow A Request Through Junction]
