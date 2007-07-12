@@ -16,9 +16,9 @@ After you have Gears installed, please next visit the following link...
 
  * Start [http://trimpath.com/demos/static_nextaction.html Next Action, Personal Edition]
 
-In Next Action, Personal Edition, any data you create is stored locally on your computer. That is, your records are not sent out over the network, but are instead kept in a fast Google Gears database on your computer.
+In Next Action, Personal Edition, any data you create is stored locally on your computer. That is, your records are not sent out over the network, but are instead kept in a fast Google Gears database on your own computer.
 
-Be sure to setup a bookmark to the above link (or perhaps, more usefully, to the Dashboard page) so you can get back to Next Action and your todo lists conveniently.
+Be sure to setup a bookmark to the above link so you can get back to Next Action and your todo lists conveniently.
 
 == Software required: ==
 Supported web browsers : Firefox 2.0+, IE 7+.
