@@ -1,12 +1,29 @@
 = TrimPath Downloads / Version History =
 
-*Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access the downloads.*
+= ________________________________________________________ =
+
+*Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access downloadable files.*
+
+= ________________________________________________________ =
+
+This page is kept for historical reasons.
 
 TrimPath follows an even/odd release numbering scheme.  Even numbers are public releases.  Odd numbers are development and work-in-progress versions.  Also, release numbers are global across all TrimPath components, which is why it looks like release numbers for individual components are skipping numbers.
 
-*Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access the downloads.*
+= ________________________________________________________ =
+
+*Please use the [http://code.google.com/p/trimpath/downloads/list Downloads] tab above to access downloadable files.*
 
 = ________________________________________________________ =
+
+== Junction ==
+About [TrimJunction Junction]
+
+|| Release || Date || Info ||
+|| 1.1.8 || 2007/08/04 || ||
+|| 1.1.6 || 2007/07/30 || ||
+|| 1.1.2 || 2007/07/12 || ||
+|| 1.0.38 || 2005/07/18 || ||
 
 == JavaScript Templates ==
 About [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates]
@@ -34,15 +51,6 @@ About TrimQuery
 || 1.0.6 || 2005/01/21 || ||
 
 || 1.0.4 || 2005/01/21 || ||
-
-== Junction ==
-About [TrimJunction Junction]
-
-|| Release || Date || Info ||
-|| 1.1.8 || 2007/08/04 || ||
-|| 1.1.6 || 2007/07/30 || ||
-|| 1.1.2 || 2007/07/12 || ||
-|| 1.0.38 || 2005/07/18 || ||
 
 == TrimSpreadsheet ==
 About TrimSpreadsheet 
