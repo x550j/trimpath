@@ -35,8 +35,8 @@ About TrimQuery
 
 || 1.0.4 || 2005/01/21 || ||
 
-== TrimJunction ==
-About TrimJunction
+== Junction ==
+About Junction, aka TrimPath Junction, aka TrimJunction
 
 || Release || Date || Info ||
 || 1.1.8 || 2007/08/04 || ||
