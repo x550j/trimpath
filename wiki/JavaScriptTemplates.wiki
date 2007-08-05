@@ -1,5 +1,5 @@
 = JavaScript Templates =
-{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
 
 For web application developers, the '''!JavaScript Templates''' engine from TrimPath is a lightweight [http://code.google.com/p/trimpath/wiki/TrimPathLicense APL / GPL open-source] component that lets you have template-based programming (like PHP/ASP/JSP) while running in a web browser.  
  * The '''JST''' engine is written entirely in standard !JavaScript.  
@@ -13,7 +13,7 @@ More information:
  * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI JST API]
  * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax JST Markup Syntax]
  * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers JST Standard Modifiers]
- * [http://code.google.com/p/trimpath/wiki/TrimPathDownload JST Downloads]
+ * [http://code.google.com/p/trimpath/downloads/list JST Downloads]
  * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion JST Community Wiki]
  * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateRunsIn JST Browser Compatibility]
  * [http://trimpath.com/demos/test1/trimpath/template_demo.html JST Online Demo]
@@ -168,4 +168,4 @@ Alternatively, you might keep *.jst files on your web server and load them into 
 We designed JST to run in a web browser AND also in any standalone !JavaScript interpreter (such as Mozilla Rhino or Spider Monkey).  The core JST engine is meant to have no critical DOM/DHTML/browser dependencies.
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates JavaScript Templates (JST) home] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateAPI API] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateSyntax syntax] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateModifiers modifiers] | [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/JavaScriptTemplateDiscussion community] }

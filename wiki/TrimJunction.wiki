@@ -1,7 +1,7 @@
 = TrimPath Junction =
 
 { [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | 
-[http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
+[http://code.google.com/p/trimpath/downloads/list download] }
 
 '''!TrimPath Junction''' is a clone or port of the terrific [http://www.rubyonrails.com/ Ruby on Rails] web MVC framework into !JavaScript.
 
@@ -105,7 +105,7 @@ It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/
  * [http://code.google.com/p/trimpath/wiki/SinglePageApplications Spa -- Single Page Applications]
  * [http://code.google.com/p/trimpath/wiki/SinglePageApplicationAndDevelopmentEnvironment Spade -- Single Page Application and Development Environment]
 
- * [http://code.google.com/p/trimpath/wiki/TrimPathDownload Download Junction] 
+ * [http://code.google.com/p/trimpath/downloads/list Download Junction] 
    * TrimPath Components Used In Junction
      * [http://code.google.com/p/trimpath/wiki/JavaScriptTemplates TrimPath JavaScript Templates]
      * [http://code.google.com/p/trimpath/wiki/TrimQuery TrimPath TrimQuery]
@@ -126,4 +126,4 @@ It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/
    * [http://code.google.com/p/trimpath/wiki/JsonLibrary JSON]
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/downloads/list download] }

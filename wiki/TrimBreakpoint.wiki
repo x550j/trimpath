@@ -1,5 +1,5 @@
 = TrimBreakpoint =
-{ [http://code.google.com/p/trimpath/wiki/TrimBreakpoint TrimBreakpoint home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://trimpath.com/demos/test1/trimpath/breakpoint_demo.html demo]}
+{ [http://code.google.com/p/trimpath/wiki/TrimBreakpoint TrimBreakpoint home] -- [http://code.google.com/p/trimpath/downloads/list download] | [http://trimpath.com/demos/test1/trimpath/breakpoint_demo.html demo]}
 
 '''TrimBreakpoint''' is a super lightweight debugging utility for JavaScript, to temporarily stop code execution so that you can inspect browser variables at runtime, including any variable in scope.  It's meant for when you're too lazy to pull out your [http://www.svendtofte.com/code/learning_venkman/ Venkman] or Visual Studio and when those alert()'s just aren't doing enough for you.
 
@@ -56,9 +56,9 @@ One nice feature of TrimBreakpoint is that the breakpoints are persistent and se
 
 TrimBreakpoint also behaves pretty much the same across different browsers (at least for IE 6.x and Firefox 1.0, which I tried it against).
 
-You can pickup TrimBreakpoint from the [http://code.google.com/p/trimpath/wiki/TrimPathDownload downloads page].
+You can pickup TrimBreakpoint from the [http://code.google.com/p/trimpath/downloads/list downloads page].
 
 Here's the [http://trimpath.com/blog/?p=24 blog post about TrimBreakpoint].
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimBreakpoint TrimBreakpoint home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://trimpath.com/demos/test1/trimpath/breakpoint_demo.html demo] }
+{ [http://code.google.com/p/trimpath/wiki/TrimBreakpoint TrimBreakpoint home] -- [http://code.google.com/p/trimpath/downloads/list download] | [http://trimpath.com/demos/test1/trimpath/breakpoint_demo.html demo] }

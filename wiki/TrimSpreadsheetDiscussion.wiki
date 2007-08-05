@@ -1,5 +1,5 @@
 = TrimSpreadsheet Community Wiki =
-{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
 
 ----
 '''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''
@@ -34,7 +34,7 @@ From spreadsheet_ui.js, Line 176.  Any advice?
 Thanks for sharing this great component, i'm learning a lot from it.
 
  * Update: I answered my own question.  If you're assembling the table using DOM, the COL nodes need to be children of a COLGROUP which is the first child of the TABLE, and the TR's need to be children of a TBODY which is a subsequent child of the TABLE.  The browser fills in these blanks when it reads other markup but with DOM you need to provide it yourself.
-{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
 
 ----
 '''UPDATE: Please see the [http://trimpath.com/forum/index.php TrimPath Forum] for the latest place to discuss stuff.'''

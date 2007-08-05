@@ -1,5 +1,5 @@
 = TrimSpreadsheet Basic Primer =
-{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
 
 ''Major acknowledgements to Eric Meyer, whose terrific [http://www.meyerweb.com/eric/tools/s5/ S5 web presentation software] inspired the !TrimSpreadsheet project, and whose ideas and content were liberally and lazily cribbed.  Thanks for the genesis! -- SteveYen''
 
@@ -7,7 +7,7 @@ For a newcomer, creating a spreadsheet in !TrimSpreadsheet may seem a bit daunti
 
 == First Steps ==
 
-First, [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] the !TrimSpreadsheet spreadsheet archive. This archive that contains everything you'll need to create a spreadsheet: the spreadsheet file itself, the style sheets that make it look pretty, and the JavaScript that drives the actual spreadsheet interface and formula recalculations.
+First, [http://code.google.com/p/trimpath/downloads/list download] the !TrimSpreadsheet spreadsheet archive. This archive that contains everything you'll need to create a spreadsheet: the spreadsheet file itself, the style sheets that make it look pretty, and the JavaScript that drives the actual spreadsheet interface and formula recalculations.
 
 Once you've downloaded the archive and uncompressed it, amongst the new files you should find a file named spreadsheet_blank.html. All the other files are more sample files or are CSS and JavaScript bits that make the spreadsheet work. We're not going to mess with those. 
 
@@ -162,4 +162,4 @@ As you've seen in this quick primer, creating your own spreadsheet is pretty sim
 Hopefully this primer has helped you get started creating your own presentation. If there's anything missing or unclear, please let me know. 
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/wiki/TrimPathDownload download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimSpreadsheet TrimSpreadsheet home] -- [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/TrimSpreadsheetDiscussion community] }
