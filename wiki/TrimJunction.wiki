@@ -11,7 +11,7 @@ Here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki
 
 == News ==
  * 2007/08/13 - Junction 1.1.12 and Next Action 0.88 released, with bug fixes and data export/import feature.
- * 2007/08/16 - Junction 1.1.10 released, which now runs on Linux.
+ * 2007/08/06 - Junction 1.1.10 released, which now runs on Linux.
  * 2007/08/04 - Junction 1.1.8 and Next Action 0.86 released, with big speed improvement.
  * 2007/07/30 - Junction 1.1.6 and Next Action 0.84 released.
  * 2007/07/12 - After two years, [http://trimpath.com/blog/?p=69 Junction and Next Action finally get updated].  Junction 1.1.2 and Next Action 0.80.
