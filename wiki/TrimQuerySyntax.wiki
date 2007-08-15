@@ -10,9 +10,10 @@ Here are the rules:
    * Use SELECT, FROM, WHERE, not select, from, where.
  * Columns must be fully specified using !TableNameOrAlias.columnName dotted syntax.  
    * Use Invoice.custId, not just custId.
-   * The exception is you may use `"SELECT * syntax"`.  
-     * Both "SELECT Invoice.* FROM Invoice" and `"SELECT * FROM Invoice"` work.
-     * Column references in WHERE or JOIN clauses, though must be fully specified (eg, WHERE Invoice.custId IS NOT NULL).
+   * The exception is you may use `"SELECT * syntax"` on single table queries.  
+     * So `"SELECT Invoice.* FROM Invoice"` and `"SELECT * FROM Invoice"` are the same.
+     * Column references in WHERE or JOIN clauses, though, must be fully specified.
+       * Use `SELECT * FROM Invoice WHERE Invoice.custId IS NOT NULL`
    * Of course, you can use aliases, too...
      * SELECT Inv.total AS total FROM Invoice AS Inv ORDER BY total
  * No expressions in the columns list.  
