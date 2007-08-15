@@ -10,8 +10,9 @@ Here are the rules:
    * Use SELECT, FROM, WHERE, not select, from, where.
  * Columns must be fully specified using !TableNameOrAlias.columnName dotted syntax.  
    * Use Invoice.custId, not just custId.
-   * This also applies for * syntax.  
-     * Use "SELECT Invoice.* FROM Invoice" not "SELECT * FROM Invoice"
+   * The exception is you may use SELECT '''*''' syntax.  
+     * Both "SELECT Invoice.* FROM Invoice" and "SELECT '''*''' FROM Invoice" work.
+     * However, the column references in WHERE or JOIN clauses must be fully specified (Invoice.custId).
    * Of course, you can use aliases, too...
      * SELECT Inv.total AS total FROM Invoice AS Inv ORDER BY total
  * No expressions in the columns list.  
