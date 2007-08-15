@@ -27,6 +27,7 @@ Here's a sample query in !TrimQuery...
 }}}
 
 NEWS:
+ * 2007/08/15 - TrimQuery 1.1.14 released with big features (INSERT, UPDATE, DELETE, and more) contributed by Brian Moschel from http://jupiterit.com
  * 2006/01/18 - TrimQuery + !TiwyWiki (Offline Flash tech by Julien Couvreur) == interesting possibilities??
    * http://blog.monstuff.com/archives/000272.html
  * 2005/10/22 - TrimQuery + AMASS == wow
