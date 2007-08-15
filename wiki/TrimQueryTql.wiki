@@ -323,7 +323,6 @@ SELECT Customer.id, Invoice.total
 == Unsupported SQL Features ==
 
 Features of SQL SELECT that are not (yet?) supported in TQL include...
- * LIKE
  * BETWEEN
  * IN (for lists and for sub-queries or nested SELECT's)
  * ANY
