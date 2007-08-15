@@ -72,12 +72,14 @@ If you're interested in the underlying parse language implementation of TrimQuer
 == selectStatement Object ==
 A selectStatement Object is the return value of any successfully parsed SELECT query definitions from parseSQL().  A selectStatement Object has the following methods...
 
-=== selectStatement.filter ( tableData ) ===
+=== selectStatement.filter ( tableData, options ) ===
 The '''selectStatement.filter()''' method performs the query represented by the selectStatement on the '''tableData''' input.  In the results, each record's keys will be defined according to the SELECT column list and aliases.  The returned results array will already be sorted and truncated as determined by any ORDER BY and LIMIT clauses.
 
 The '''selectStatement.filter()''' method is stateless.  It may be invoked multiple times over the same or different '''tableData''', and a new results array will be returned every time.  Caching of results is up to you.
 
 The '''tableData''' input should be a 2-level nested data structure.  The keys are table names.  The values are arrays of records for each table.  The structure of the '''tableData''' records must match the '''tableColumnDefinitions'''.
+
+The '''options''' are an optional hash or map to control the filtering.  Valid options are '''with_table''', which is a boolean (defaults to false).  Setting with_table option to true in that hash will return the data in the format table_name+’.’+field_name as the keys in the resulting hash. This is useful for SELECT queries containing LEFT OUTER JOINs or other joins where there will be multiple tables represented in the results.
 
 For example...
 {{{
@@ -101,9 +103,17 @@ For example...
   </script>
 }}}
 
+An example of the with_table:
+{{{
+  var rs = stmt.filter(tableData, null, {with_table: true});
+  // The rs will contain a records resembling:
+  // [{Invoice.id: 1, Customer.id: 2, Customer.name: ‘Pete’, ...},
+  //  {Invoice.id: ...}]
+}}}
+
 === selectStatement.toString () ===
 
-The '''selectStatement.toString()''' method returns a String of the SQL text that represents the selectStatement Object.  This SQL string is meant to be legal SQL and is often used as a debugging aid.
+The '''selectStatement.toString()''' method returns a String of the SQL text that represents the selectStatement Object.  This SQL string is meant to be legal-ish SQL and is often used as a debugging aid.
 
 ----
 { [http://code.google.com/p/trimpath/wiki/TrimQuery TrimQuery home] -- [http://code.google.com/p/trimpath/wiki/TrimQueryAPI API] | [http://code.google.com/p/trimpath/wiki/TrimQuerySyntax syntax] | [http://code.google.com/p/trimpath/downloads/list download] | [http://code.google.com/p/trimpath/wiki/TrimQueryDiscussion community] }
