@@ -1,4 +1,4 @@
-= Trim Path Component License =
+= !TrimPath Component License =
 
 All TrimPath components are dual-licensed with the [http://trimpath.com/legal/gpl.txt GNU Public License] version 2, and with the [http://www.apache.org/licenses/LICENSE-2.0.txt Apache License, Version 2.0].
 
