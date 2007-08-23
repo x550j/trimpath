@@ -1,4 +1,4 @@
-= TrimPath Junction =
+= Junction =
 
 { [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | 
 [http://code.google.com/p/trimpath/downloads/list download] }
