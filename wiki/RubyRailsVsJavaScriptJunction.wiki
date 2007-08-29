@@ -169,24 +169,24 @@ MilestoneController = function() {
         with (res) {
             res.project = Project.find(req['objId']);
             if (project == null ||
-                (project.domainId != null &&
-                 project.domainId != person.domainId)) {
+                (project.domain_id != null &&
+                 project.domain_id != person.domain_id)) {
                 flash['notice'] = 'Unknown project.';
                 return redirectToAction('index');
             }
 
             res.milestone = Milestone.newInstance();
-            milestone.creatorId = person.id;
-            milestone.domainId  = person.domainId;
-            milestone.projectId = project.id;
+            milestone.creator_id = person.id;
+            milestone.domain_id  = person.domain_id;
+            milestone.project_id = project.id;
         }
     }
 
     this.create = function(req, res) { 
         with (res) {
             res.milestone = Milestone.newInstance(req['milestone']);
-            milestone.creatorId = person.id;
-            milestone.domainId  = person.domainId;
+            milestone.creator_id = person.id;
+            milestone.domain_id  = person.domain_id;
             if (milestone.save()) {
                 flash['notice'] = 'Milestone ' + milestone.name + ' is created.';
                 redirectToAction('show', milestone.id);
@@ -200,7 +200,7 @@ MilestoneController = function() {
         if (milestone != null) {
             milestone.destroy();
             res.flash['notice'] = 'The milestone ' + milestone.name + ' is deleted.';
-            res.redirectTo('project', 'show', milestone.projectId);
+            res.redirectTo('project', 'show', milestone.project_id);
             return;
         }
         res.flash['notice'] = 'We could not delete an unknown milestone.';
