@@ -5,7 +5,9 @@ The open source Junction framework is a conventions-over-configuration, synchron
  * '''!TrimPath Junction''' is a clone or port of the terrific [http://www.rubyonrails.com/ Ruby on Rails] web MVC framework into !JavaScript.
  * '''!TrimPath Junction''' is also sometimes referred to as !TrimJunction, or as just Junction.
 
-Show me code: here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
+Show me some code: here are some code snippets comparing [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
+
+Junction is currently *the best* (well, the only) synchronizing web MVC framework for !JavaScript.  Junction is your best bet if you want to build a single page application over technologies like Google Gears.
 
 == More ==
  * *[http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation]*
@@ -27,9 +29,9 @@ Show me code: here's a code snippet comparison between [http://code.google.com/p
 
 == Vision ==
 
-In a nutshell: mindlessly copy Rails when possible, because it's a great web MVC framework.  Next, riff on Rails to allow for doing cool, non-Rails maneuvers that are only possible with JavaScript.
+In a nutshell: copy Rails when possible, because it's a great web MVC framework.  Next, riff on Rails to allow for doing cool, non-Rails maneuvers that are only possible with JavaScript.
 
-The result should be a web MVC framework that runs in either the client AND the server.  While we're at it, explore and push the edges of occasionally connected web applications.
+The result should be a web MVC framework that runs in either the client AND the server (Rhino).  While we're at it, explore and push the edges of occasionally connected web applications, providing easy synchronization between distributed code and data.
 
 Long version:
 
@@ -98,7 +100,7 @@ BlogPostController = function() {}
 scaffold(BlogPostController, 'BlogPost')
 }}}
 
-It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html convention, not configuration].  That is, if you just follow the naming conventions, there are no configuration files.  The Junction framework favors reflection and late-bound dynamic object extensions.  The result is less code, no recompilation steps, and faster development.
+It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html convention, not configuration].  That is, if you just follow the naming conventions, there are no configuration files.  The Junction framework favors reflection and late-bound dynamic object decorations and extensions.  The result is less code, no recompilation steps, and faster development.
 
 == Links ==
  * [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html Junction Documentation]
