@@ -132,4 +132,4 @@ It's all hooked together through [http://www.onlamp.com/pub/a/onlamp/2005/01/20/
    * [http://code.google.com/p/trimpath/wiki/JsonLibrary JSON]
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/downloads/list download] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/downloads/list download] }
