@@ -12,6 +12,7 @@ Show me code: here's a code snippet comparison between [http://code.google.com/p
  * *[http://code.google.com/p/trimpath/downloads/list download]*
 
 == News ==
+ * 2007/08/29 - Junction 1.1.16 and Next Action 0.92 released, with new modelInit() syntax for Model definitions, and bug fixes.
  * 2007/08/15 - Junction 1.1.14 released, with new TrimQuery improvements.  Also, Next Action 0.90 and Happy Birthday Alexander!
  * 2007/08/13 - Junction 1.1.12 and Next Action 0.88 released, with bug fixes and data export/import feature.
  * 2007/08/06 - Junction 1.1.10 released, which now runs on Linux.
