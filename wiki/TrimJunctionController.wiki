@@ -1,6 +1,6 @@
 = TrimJunction Controller =
 
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
 
 Junction Controllers are made up of one or more actions that performs its purpose 
 and then either renders a template or redirects to another action. 
@@ -155,4 +155,4 @@ If you need to redirect on the condition of something, then be sure to use a "re
 '''Acknowledgements''': this page was ported from the !ActionController::Base API documentation from the [http://api.rubyonrails.com/ Ruby on Rails] framework.
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
