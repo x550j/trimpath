@@ -1,6 +1,6 @@
 = Ruby on Rails Versus JavaScript on Junction Code =
 
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/downloads/list download] }
 
 Bill Katz notes that the [http://www.billkatz.com/node/42 programming language matters] when creating a framework like [http://www.rubyonrails.com/ Ruby On Rails] (RoR).
 
@@ -250,4 +250,4 @@ Junction also supports !EcmaScript Templates, if you prefer a template markup sy
 See also: [http://code.google.com/p/trimpath/wiki/TrimJunction TrimPath Junction], [http://code.google.com/p/trimpath/wiki/RubyVsJavaScript Ruby versus JavaScript]
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://code.google.com/p/trimpath/wiki/TrimJunctionCommunity community] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] | [http://code.google.com/p/trimpath/downloads/list download] }
