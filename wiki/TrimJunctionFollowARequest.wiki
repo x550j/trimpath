@@ -1,6 +1,6 @@
 = Follow A Request Through Junction =
 
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
 
 For web application developers, let's follow a request through the [http://code.google.com/p/trimpath/wiki/TrimJunction Junction] Model-View-Controller framework.  That is, what happens when a user clicks on a hyperlink in a Junction application...
 
@@ -69,15 +69,16 @@ Here's one example definition of the Blog model...
 {{{
 Blog = function() {}
 
-with (modelFor('Blog')) {
-    belongsTo('Category');
-    belongsTo('User');
-    hasMany('Comments');
-    validatesPresenceOf('title');
-}
+modelInit('Blog');
+
+Blog.belongsTo('Category');
+Blog.belongsTo('User');
+
+Blog.hasMany('Comments');
+Blog.validatesPresenceOf('title');
 }}}
 
-The call to modelFor('Blog') tells the Junction framework to automatically decorate the Blog function with "class" functions like find(), findActive(), findBySql(), newInstance(), and many more.  So, there's very little work for you to do.
+The call to modelInit('Blog') tells the Junction framework to automatically decorate the Blog function with "class" functions like find(), findActive(), findBySql(), newInstance(), and many more.  So, there's very little work for you to do.
 
 The automatically generated Blog.findActive() function will do a SQL query against the Blog table.  For example, if you call Blog.findActive('all'), the SQL query would look like "SELECT Blog.* from Blog WHERE Blog.active = 1".  The method also converts the resultset into an Array of Blog instances.
 
@@ -122,4 +123,4 @@ The final result of layout rendering is now displayed by the browser.
 Finally, you may have also noticed, in order to generate the hyperlinks, the template uses the linkToLocal() function.  This brings us back to the start and completes this article.
 
 ----
-{ [http://code.google.com/p/trimpath/wiki/TrimJunction TrimJunction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
+{ [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
