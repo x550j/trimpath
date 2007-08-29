@@ -4,7 +4,7 @@
 
 Bill Katz notes that the [http://www.billkatz.com/node/42 programming language matters] when creating a framework like [http://www.rubyonrails.com/ Ruby On Rails] (RoR).
 
-For the [http://code.google.com/p/trimpath/wiki/TrimJunction TrimPath Junction] clone of RoR, the !JavaScript language appears to be dynamic enough to support many of the concise concepts of RoR.  
+For the [http://code.google.com/p/trimpath/wiki/TrimJunction TrimPath Junction] clone of RoR, the !JavaScript language is dynamic enough to support many of the concise concepts of RoR.  
 
 !JavaScript supports...
  * duck typing
@@ -35,17 +35,17 @@ end
 
 !JavaScript:
 {{{
-Milestone = function() {
-}
+Milestone = function() {}
 
-with (modelFor('Milestone')) {
-    belongsTo('Creator',  { modelName : 'Person' });
-    belongsTo('Domain',   { modelName : 'Org' });
-    belongsTo('Project');
-    belongsTo('Assignee', { modelName : 'Person' });
-    hasMany('Messages');
-    hasMany('TodoLists');
-}
+modelInit('Milestone');
+
+Milestone.belongsTo('Creator',  { modelName : 'Person' });
+Milestone.belongsTo('Domain',   { modelName : 'Org' });
+Milestone.belongsTo('Project');
+Milestone.belongsTo('Assignee', { modelName : 'Person' });
+
+Milestone.hasMany('Messages');
+Milestone.hasMany('TodoLists');
 
 Milestone.findRecentByProject = function(projectId, date) {
     return Milestone.find('all', { 
@@ -245,6 +245,8 @@ Ruby ERb template:
     </table>
 </div>
 }}}
+
+Junction also supports !EcmaScript Templates, if you prefer a template markup syntax that looks more like ERb/rhtml or JSP.
 
 ----
 
