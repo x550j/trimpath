@@ -8,7 +8,6 @@ The open source Junction framework is a conventions-over-configuration, synchron
 Show me code: here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
 
 == More ==
-
  * *[http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation]*
  * *[http://code.google.com/p/trimpath/downloads/list download]*
 
@@ -49,7 +48,7 @@ Junction, like Rails, also stays out of your way.  If you need to specify HTML d
 
 == Model - View - Controller ==
 
-Here's how MVC appears in Junction.
+Here's how the web MVC paradigm appears in Junction.
 
  * '''Model''' - in the Junction world, these are just a plain old !JavaScript 'classes'.  Actually, that means these are just plain old !JavaScript functions, and they follow the [http://www.martinfowler.com/eaaCatalog/activeRecord.html Active Record pattern] of object-relational mapping.  Fancy queries are done using SQL, even when offline or disconnected from the server.  We use the TrimQuery project and Google Gears RDBMS to allow SQL to run in a (possibly disconnected) web browser data cache.
 {{{
