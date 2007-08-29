@@ -4,7 +4,7 @@
 
 The most complete application built on Junction is called [http://code.google.com/p/trimpath/wiki/NextAction Next Action], a todo-list tracking tool in the [http://code.google.com/p/trimpath/wiki/GettingThingsDone Getting Things Done] style.
 
-The demo's data model is for action, context, and project tracking.  It relies on Google Gears for client-side RDBMS persistence.  If you don't have Gears installed, the Junction framework automatically degrades and seamlessly switches to use a non-persistent, in-memory database, which is good for demos and test-drives.
+The demo's data model is for action, context, and project tracking.  It relies on Google Gears for client-side RDBMS persistence.  If you don't have Gears installed, the Junction framework automatically degrades and seamlessly switches to use a non-persistent, in-memory RDBMS (see TrimQuery), which is useful behavior for demos, test-drives, and using Next Action from a friend's computer.
 
 ----
 { [http://code.google.com/p/trimpath/wiki/TrimJunction Junction home] | [http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation] }
