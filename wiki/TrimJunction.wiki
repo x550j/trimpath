@@ -7,7 +7,11 @@ The open source Junction framework is a conventions-over-configuration, synchron
 
  * '''!TrimPath Junction''' is a clone or port of the terrific [http://www.rubyonrails.com/ Ruby on Rails] web MVC framework into !JavaScript.
  * '''!TrimPath Junction''' is also sometimes referred to as !TrimJunction, or as just Junction.
- * Show me code: here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
+
+Show me code: here's a code snippet comparison between [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
+
+ * *[http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation]*
+ * *[http://code.google.com/p/trimpath/downloads/list download]*
 
 == News ==
  * 2007/08/15 - Junction 1.1.14 released, with new TrimQuery improvements.  Also, Next Action 0.90 and Happy Birthday Alexander!
