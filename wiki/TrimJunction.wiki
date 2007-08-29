@@ -7,7 +7,7 @@ The open source Junction framework is a conventions-over-configuration, synchron
 
 Show me some code: here are some code snippets comparing [http://code.google.com/p/trimpath/wiki/RubyRailsVsJavaScriptJunction Ruby on Rails versus JavaScript on Junction].  
 
-Junction is your best bet if you want to build a single page application using web MVC paradigms, while letting you leverage technologies like Google Gears.
+Junction is your best bet if you want to build single page applications using web MVC paradigms, while letting you leverage technologies like Google Gears.
 
 == More ==
  * *[http://trimpath.googlecode.com/svn/trunk/junction_docs/index.html documentation]*
