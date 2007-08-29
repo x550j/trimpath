@@ -55,9 +55,9 @@ Here's how the web MVC paradigm appears in Junction.
 {{{
 BlogPost = function() {}
 
-with (modelFor('BlogPost')) {
-    hasMany('Comments)
-}
+modelInit('BlogPost');
+
+BlogPost.hasMany('Comments);
 
 BlogPost.findByShortName = function(shortName) {
     return BlogPost.find("first", { conditions: ["BlogPost.shortName = ?", shortName] });
