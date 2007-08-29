@@ -80,7 +80,7 @@ Blog.validatesPresenceOf('title');
 
 The call to modelInit('Blog') tells the Junction framework to automatically decorate the Blog function with "class" functions like find(), findActive(), findBySql(), newInstance(), and many more.  So, there's very little work for you to do.
 
-The automatically generated Blog.findActive() function will do a SQL query against the Blog table.  For example, if you call Blog.findActive('all'), the SQL query would look like "SELECT Blog.* from Blog WHERE Blog.active = 1".  The method also converts the resultset into an Array of Blog instances.
+The automatically generated Blog.findActive() function will do a SQL query against the Blog table.  For example, if you call Blog.findActive('all'), the SQL query would look like `SELECT Blog.* from Blog WHERE Blog.active = 1`.  The method also converts the resultset into an Array of Blog instances.
 
 The SQL query is next executed on an RDBMS.  But, which RDBMS?  The answer depends on where you're running your application.  If your application is running in a server-side web application server, the SQL query is executed against a server-side RDBMS.  
 
