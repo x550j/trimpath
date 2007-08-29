@@ -74,7 +74,6 @@ Ruby:
 {{{
 class MilestoneController < ApplicationController
     layout 'main'
-    before_filter :need_login, :only => [ :edit, :update, :new, :create, :destroy ]
 
     def index
         @milestones = Milestone.find_all
@@ -207,8 +206,6 @@ MilestoneController = function() {
         res.flash['notice'] = 'We could not delete an unknown milestone.';
         res.redirectTo('home', 'start');
     }
-
-    beforeFilter(needLogin, this, 'edit', 'update', 'newInstance', 'create', 'destroy');
 }
 
 MilestoneController.layoutName = 'main';
