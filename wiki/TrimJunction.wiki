@@ -14,6 +14,7 @@ Junction is your best bet if you want to build _single page applications_ using 
  * *[http://code.google.com/p/trimpath/downloads/list download]*
 
 == News ==
+ * 2007/09/10 - Junction 1.1.18 and Next Action 0.94 released.
  * 2007/08/31 - Junction introduction article at O'Reilly onlamp.com.  Thanks to Jack Herrington, who did all the writing!
    * http://www.onlamp.com/pub/a/onlamp/2007/08/30/introducing-trimpath-junction.html
    * http://ajaxian.com/archives/trimpath-junction-a-walk-through
