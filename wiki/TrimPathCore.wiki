@@ -1,0 +1,13 @@
+#Query and JST modules for use in many contexts
+
+= Introduction =
+
+Enterprise tested Query and JST modules.  Plus some extra utilities.
+
+
+= Details =
+
+TrimPath Core was started from issue 31:
+http://code.google.com/p/trimpath/issues/detail?id=31#c0
+
+You can find dev and minified uploads there.
