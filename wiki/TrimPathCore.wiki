@@ -12,3 +12,9 @@ TrimPath Core was started from issue 31:
 http://code.google.com/p/trimpath/issues/detail?id=31#c0
 
 You can find dev and minified uploads there.
+
+Notes:
+possible avenues for improvement (templating costs most to do)
+- incorporate code from higher performing JST implementation that was circulating in forums
+- div pools to reuse somehow for templating
+- try some stress tests,  possible to free up allocated divs when replacing div,  or is it automatic,  or would it be a leak if you do a lot of DOM templating?
