@@ -133,7 +133,7 @@ Bypass echo with standard server get CSV file.  I include this here just for a c
 	}
 }}}
 
-Nv2() for those of you still awake,  demonstrates 2005 Java skills (rather than 1999 Java skills),  through the use of Generics (yeah,  finally,  jeez):
+Nv2() demonstrates 2005 Java skills (rather than 1999 Java skills),  through the use of Generics:
 
 {{{
 	private <T> T nv2(T a, T b) {
@@ -141,7 +141,7 @@ Nv2() for those of you still awake,  demonstrates 2005 Java skills (rather than 
 	}
 }}}
 
-End of partition 1,  thank god.
+End of partition 1 of the problem.  Partition one is the user simply wants all the data in whatever form without any help from the Ajax interface.
 
 Now the interesting part.
 
