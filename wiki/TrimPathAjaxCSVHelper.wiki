@@ -17,7 +17,7 @@ The second part is the echo part,  a different link to download the search resul
 
 Part 1:  User wants entire thing.   Bypass echo with standard server get CSV file.  I include this here just for a complete context, which might be useful to some people.  It's a Spring Portlet controller method.  The domain is Records Management -- the lifeblood of any organization.
 
-	/**
+	/* 
 	 * Retrieve entire Record Retention Schedules and return in CSV rather than JSON.
 	 */
 	@RequestMapping(params = "do=retrieveRecRetSchedDataCSV")
@@ -137,4 +137,3 @@ Nv2() for those of you still awake,  demonstrates 2005 Java skills (rather than 
 	private <T> T nv2(T a, T b) {
 		return (a == null)?b:a;
 	}
-
