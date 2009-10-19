@@ -22,4 +22,4 @@ possible avenues for improvement (templating costs most to do)
 To-do:
 make trimpath core upload
 make ajax helper upload
-make branch for core and helper,  be a dancin' committing fool.
+make branch for core and helper (to support various export formats and uses,  ongoing).
