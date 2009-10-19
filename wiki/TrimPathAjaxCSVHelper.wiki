@@ -2,7 +2,7 @@
 
 = Introduction =
 
-data:uri is not fully supported in browsers.  Were it supported the same code would work on IE as it does on Firefox,  and you could have full control over the filename (if it is a CSV export you are doing).
+data:uri is not fully supported in browsers.  Were it supported the same code would work on IE as it does on Firefox,  and you could have full control over the filename (if it is a CSV export you are doing).  From the examples you can find,  mostly on the ExtJS forums,  the code you have to add is complex and doesn't do what you need it to do.
 
 Therefore,  small server-side echo functions are required to help your AJAX page to do CSV export download files (not to mention PDF or Word or other formats for whatever data the user filters on the ajax page).
 
