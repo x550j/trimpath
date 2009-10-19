@@ -18,3 +18,8 @@ possible avenues for improvement (templating costs most to do)
 - incorporate code from higher performing JST implementation that was circulating in forums
 - div pools to reuse somehow for templating
 - try some stress tests,  possible to free up allocated divs when replacing div,  or is it automatic,  or would it be a leak if you do a lot of DOM templating?
+
+To-do:
+make trimpath core upload
+make ajax helper upload
+make branch for core and helper,  be a dancin' committing fool.
