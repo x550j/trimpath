@@ -15,7 +15,8 @@ To begin with the problem is partitioned into two parts,  one where the customer
 
 The second part is the echo part,  a different link to download the search results that are sitting in a result set from a trimpath query.
 
-Part 1:  User wants entire thing.   Bypass echo with standard server get CSV file.  I include this here just for a complete context, which might be useful to some people.  It's a Spring Portlet controller method.  Java, yes,  sorry, I can't help it,  gotta eat.  The domain is Records Management -- the lifeblood of any organization.
+== Part 1:  User wants entire thing. == 
+Bypass echo with standard server get CSV file.  I include this here just for a complete context, which might be useful to some people.  It's a Spring Portlet controller method.  Java, yes,  sorry, I can't help it,  gotta eat.  The domain is Records Management -- the lifeblood of any organization.
 {{{
 	/**
 	 * Retrieve entire Record Retention Schedules and return in CSV rather than JSON.
@@ -139,3 +140,11 @@ Nv2() for those of you still awake,  demonstrates 2005 Java skills (rather than 
 		return (a == null)?b:a;
 	}
 }}}
+
+End of partition 1,  thank god.
+
+----
+
+Now the interesting part.
+
+== Trimpath Ajax Echo Helper ==
