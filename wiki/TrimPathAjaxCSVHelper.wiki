@@ -143,8 +143,6 @@ Nv2() for those of you still awake,  demonstrates 2005 Java skills (rather than 
 
 End of partition 1,  thank god.
 
-----
-
 Now the interesting part.
 
 == Part 2. Trimpath Ajax Echo Helper ==
@@ -206,3 +204,107 @@ currentListingLabel is simply a string put together to be the filename,  which i
 {{{
 		 this.currentListingLabel = "RecordRetentionSchedules"+optionVal+keywordsVal.replace(/[^a-zA-Z0-9]/g, '');
 }}}
+
+Ok,  that does it for the javascript side.  The form gets launched at the server with a JSON struct representing a CSV to get spit back as an actual CSV download with the text/csv mime header setting and the filename to be saved as.
+
+The server-side piece that responds is here,  in a Spring Portlet context:
+{{{
+
+	/**
+	 * Ajax Echo Service -- Take a JSON in a textarea POST input and echo back a CSV.
+	 * This should eventually be a separate servlet in a separate WAR file.
+	 * 
+	 * This is an ajax utility because the data: uri doesn't completely support
+	 * what you want to do in ajax (and no support at all in IE).  There would
+	 * be a variety of ajax echo services,  such as PDF etc.  There is no support
+	 * for naming the file in data: uri for example,  you just get gooblygook
+	 * for a filename.   Need serverside helpers for various tasks.
+	 * 
+	 * Example input JSON:
+	 * { 
+	 *     "col_headers": ["id","cost_center_code","dept_code","dept_name",....],
+	 *     "data": [{"active_flag":"I","cost_center_code":"005460","dept_active_flag":"T","dept_code":"OIT",...}],
+	 *     "dataset_name":"RecordRetentionScheduleshelpdesk"
+	 * }
+	 * 
+	 * the col headers determines the order and selection of data values.
+         *
+	 *  This function uses the CSV utilities from http://ostermiller.org/utils/.
+	 */
+	
+	@RequestMapping(params = "do=ajaxEchoServiceCSV")
+	public void ajaxEchoServiceCSV(ResourceRequest request, ResourceResponse response) {
+
+		String jsonString = request.getParameter("ajax_echo_area");
+
+		JSONObject echoObject = null;
+	    try {
+	    	echoObject = new JSONObject(jsonString); 
+	    } catch (Exception e) {
+			logger.error("RRS.ajaxEchoServiceCSV(): failed to JSONify listing string rep: " + e + jsonString);
+	    }
+	    
+		String dataSetName = null;
+		JSONArray csvHeaders = null;
+		JSONArray csvData = null;
+		try {
+			dataSetName = echoObject.getString("dataset_name");
+			csvHeaders = echoObject.getJSONArray("col_headers");
+			csvData = echoObject.getJSONArray("data");
+		} catch (Exception e1) {
+			logger.error("RRS.ajaxEchoServiceCSV(): incorrect data structure: " + e1);
+		}
+		
+		String lineOne [] = new String[csvHeaders.length()];
+		
+		for (int i = 0; i < csvHeaders.length(); i++) {
+			try {
+				lineOne[ i ] = csvHeaders.getString(i).toUpperCase();
+			} catch (Exception e) {
+				logger.error("RRS.ajaxEchoServiceCSV(): error getting lineOne: " + e);
+			}
+		}
+		
+		//fix SYLK oddity from Microsoft
+		if ( lineOne[0].equals("ID") ) {
+			lineOne[0] = "RRSID";
+		}
+		
+		String dataLines [][] = new String[csvData.length()][csvHeaders.length()];
+		try {
+			for (int j = 0; j < csvData.length(); j++) {
+				JSONObject currentDataRecord = csvData.getJSONObject(j);
+				for (int i = 0; i < csvHeaders.length(); i++) {
+						dataLines[ j ][ i ] = currentDataRecord.getString(csvHeaders.getString(i));
+				}
+			}
+		} catch (Exception e) {
+			logger.error("RRS.ajaxEchoServiceCSV(): error getting dataLines: " + e);
+		}
+		
+		String filename = dataSetName+".csv";
+
+		response.setContentType("text/csv");
+		Long size = null;
+		if (size != null) {
+			response.setProperty("Content-Disposition", "attachment; filename=" + filename + "; size=" + size);
+		} else {
+			response.setProperty("Content-Disposition", "attachment; filename=" + filename);
+		}
+
+		try {
+			PrintWriter pw;
+			pw = response.getWriter();
+			ExcelCSVPrinter exclcsv = new ExcelCSVPrinter(pw);
+            exclcsv.println(lineOne);
+            exclcsv.println(dataLines);
+			pw.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    
+	}
+
+}}}
+
+This function is generic enough to echo back any result set with any columns (all that work is done on the browser).
