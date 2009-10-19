@@ -11,4 +11,6 @@ The purpose is to do all the real work on the browser,  and only echo the datase
 
 = Details =
 
-TBD
+To begin with the problem is partitioned into two parts,  one where the customer wishes to download the entire database,  this is a standard fixed call to a server-side getAll function (not through the echo mechanism).
+
+The second part is the echo part,  a different link to download the search results that are sitting in a result set from a trimpath query.
