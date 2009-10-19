@@ -308,3 +308,5 @@ The server-side piece that responds is here,  in a Spring Portlet context:
 }}}
 
 This function is generic enough to echo back any result set with any columns (all that work is done on the browser).
+
+The ostermiller utils are extremely useful for many things in addition to CSV,  but will not distribute here due to the GPL.  If they suddenly disappear off the web,  email me and I'll forward you a copy.  --kucerarichard
