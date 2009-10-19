@@ -14,3 +14,127 @@ The purpose is to do all the real work on the browser,  and only echo the datase
 To begin with the problem is partitioned into two parts,  one where the customer wishes to download the entire database,  this is a standard fixed call to a server-side getAll function (not through the echo mechanism).
 
 The second part is the echo part,  a different link to download the search results that are sitting in a result set from a trimpath query.
+
+Part 1:  User wants entire thing.   Bypass echo with standard server get CSV file.  I include this here just for a complete context, which might be useful to some people.  It's a Spring Portlet controller method.  The domain is Records Management -- the lifeblood of any organization.
+
+	/**
+	 * Retrieve entire Record Retention Schedules and return in CSV rather than JSON.
+	 */
+	@RequestMapping(params = "do=retrieveRecRetSchedDataCSV")
+	public void retrieveRecRetSchedDataCSV(ResourceRequest request, ResourceResponse response) {
+
+		String dataSetName = "RecordRetentionSchedules";
+		String filename = dataSetName+".csv";
+		String output = "\"test,  ok\", \"test\"";
+
+		RecRetSchedSettings settings = loadSettings();
+
+		RecRetSchedData data = new RecRetSchedData();
+
+	    retrieveRecRetSchedItems( data, null );
+	    
+		String newListingData = 	    		  
+			"SCHEDULE ID,"+
+			"COST_CENTER_CODE," +
+			"DEPT_CODE,"+
+			"DEPT_NAME,"+
+			"DEPT_OAS_FLAG,"+
+			"DEPT_LOCN_ID,"+
+			"DEPT_ACTIVE_FLAG,"+
+			"RECORD_CODE,"+
+			"RECORD_TITLE,"+
+			"RECORD_DESCR,"+
+			"DEPT_RETENTION_DESCR,"+
+			"TOTAL_RETENTION_DESCR,"+
+			"EVENT_BASED_FLAG,"+  
+			"DEPT_RETENTION_QTY,"+
+			"TOTAL_RETENTION_QTY,"+
+			"DEPT_RETENTION_UNIT,"+
+			"TOTAL_RETENTION_UNIT,"+
+			"OAS_FLAG,"+
+			"GENERAL_FLAG,"+
+			"ACTIVE_FLAG\n";
+		
+		int rowCounter = 0;
+		RecordCode currentSchedItem = null;
+		
+	    try {
+
+			for( RecordCode schedItem : data.recRetSchedItems ){
+	    		  			  
+			  if ( rowCounter++ > 0 ) { newListingData += "\n"; }
+			  
+			  currentSchedItem = schedItem;
+
+			  Department blankDept = new Department();
+			  blankDept.setDeptName("");
+			  blankDept.setActiveFlag("");
+			  blankDept.setCostcode("");
+			  blankDept.setDeptCode("");
+			  blankDept.setLocnIdDefault(new BigDecimal(0));
+			  blankDept.setOasFlag("");
+			  
+			  newListingData +=  
+				  schedItem.getId()+", " +
+				  nv2(schedItem.getDept(), blankDept).getCostcode()+", " +
+				  nv2(schedItem.getDept(), blankDept).getDeptCode()+", " +
+				  nv2(schedItem.getDept(), blankDept).getDeptName().replace( "\"", "'").replace( "<", " sym-lt ").replace( ">", " sym-gt ").replace( "\n", " ").replace( ",", " ")+", " +
+				  nv2(schedItem.getDept(), blankDept).getOasFlag()+", " +
+				  nv2(schedItem.getDept(), blankDept).getLocnIdDefault()+", " +
+				  nv2(schedItem.getDept(), blankDept).getActiveFlag()+", " +
+				  schedItem.getRecordCode()+", " +
+				  nv2(schedItem.getRecordTitle(),"").replace( "\"", "'").replace( "<", " sym-lt ").replace( ">", " sym-gt ").replace( "\n", " ").replace( ",", " ")+", " +
+				  nv2(schedItem.getRecordDescr(),"").replace( "\"", "'").replace( "<", " sym-lt ").replace( ">", " sym-gt ").replace( "\n", " ").replace( ",", " ")+", " +		  
+				  nv2(schedItem.getDeptRetentionDescr(),"").replace( "\"", "'").replace( "<", " sym-lt ").replace( ">", " sym-gt ").replace( "\n", " ").replace( ",", " ")+", " +
+				  nv2(schedItem.getTotalRetentionDescr(),"").replace( "\"", "'").replace( "<", " sym-lt ").replace( ">", " sym-gt ").replace( "\n", " ").replace( ",", " ")+", " +
+				  schedItem.getEventBasedFlag()+", " +		  
+				  schedItem.getDeptRetentionQty()+", " +
+				  schedItem.getTotalRetentionQty()+", " +
+				  schedItem.getDeptRetentionUnit()+", " +
+				  schedItem.getTotalRetentionUnit()+", " +
+				  schedItem.getOasFlag()+", " +
+				  schedItem.getGeneralFlag()+", " +
+				  schedItem.getActiveFlag()+" ";
+			  
+			}
+			
+			
+	    } catch (Exception e) {
+			logger.error("RRS.retrieveRecRetSchedData(): failed to parse list at index "+rowCounter+" RecordCode: "+currentSchedItem+" Exception: "+e.toString());
+	    }
+	    
+		newListingData += "\n";
+		
+		output = newListingData;
+		
+		response.setContentType("text/csv");
+		Long size = null;
+		if (size != null) {
+			response.setProperty("Content-Disposition", "attachment; filename=" + filename + "; size=" + size);
+		} else {
+			response.setProperty("Content-Disposition", "attachment; filename=" + filename);
+		}
+
+		try {
+			PrintWriter pw;
+			pw = response.getWriter();
+			if (output != null) {
+				pw.print(output);
+			} else {
+				pw.print("output is null");
+			}
+			pw.flush();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    
+	}
+
+
+Nv2() for those of you still awake,  demonstrates 2005 Java skills (rather than 1999 Java skills),  through the use of Generics (yeah,  finally,  jeez):
+
+	private <T> T nv2(T a, T b) {
+		return (a == null)?b:a;
+	}
+
