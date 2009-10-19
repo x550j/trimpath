@@ -147,4 +147,62 @@ End of partition 1,  thank god.
 
 Now the interesting part.
 
-== Trimpath Ajax Echo Helper ==
+== Part 2. Trimpath Ajax Echo Helper ==
+
+In a Spring MVC controller context,  at the bottom of your view.jsp you have a launch pad:
+{{{
+<form name="ajax_echo_launcher" id="ajax_echo_launcher" action="${ajaxEchoServiceCSVURL}" method="post" style="display:none;"> 
+<textarea name="ajax_echo_area" id="ajax_echo_area" rows="15" cols="80"></textarea>
+</form>
+}}}
+
+The ajax_echo_area is populated with CSV content from a recent query:
+{{{
+	prepareAndSendEcho: function() {
+		var the_col_names = [];
+		for(var name in policy_viewer_records_columnDefs.recordcodes) {
+			if(! (policy_viewer_records_columnDefs.recordcodes[name] instanceof Function)) {
+				the_col_names.push(name);
+			}
+		}
+		var echo_struct = { dataset_name: this.currentListingLabel, col_headers: the_col_names, data: this.currentListing };
+		jQuery("#ajax_echo_area").html(YAHOO.lang.JSON.stringify(echo_struct));
+		jQuery("#ajax_echo_launcher").get(0).submit();
+
+	}
+}}}
+
+In the above,  this.currentListing is the return data from a recent trimpath query.  policy_viewer_records_columnDefs.recordcodes is the Trimpath Query schema from which I grab all column names for the header:
+{{{
+   var policy_viewer_records_columnDefs = {
+		   recordcodes  : 
+     	   { 
+	         id          : { type: "String" },
+	         cost_center_code     : { type: "String" },
+	         dept_code     : { type: "String" },
+	         dept_name:  { type: "String" },
+	         dept_oas_flag          : { type: "String" },
+	         dept_locn_id     : { type: "String" },
+	         dept_active_flag          : { type: "String" },
+	         record_code: { type: "String" },
+	         record_title: { type: "String" },
+	         record_descr: { type: "String" },
+	         dept_retention_descr: { type: "String" },
+	         total_retention_descr: { type: "String" },
+             event_based_flag: { type: "String" },
+             dept_retention_qty: { type: "String" },
+             total_retention_qty: { type: "String" },
+             dept_retention_unit: { type: "String" },
+             total_retention_unit: { type: "String" },
+             oas_flag: { type: "String" },
+             general_flag: { type: "String" },
+             active_flag: { type: "String" }
+		  
+            }
+        };    
+}}}
+
+currentListingLabel is simply a string put together to be the filename,  which is just a representation of whatever optionVals and keywordVals the user was querying on:
+{{{
+		 this.currentListingLabel = "RecordRetentionSchedules"+optionVal+keywordsVal.replace(/[^a-zA-Z0-9]/g, '');
+}}}
