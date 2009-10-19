@@ -1,4 +1,4 @@
-#Query and JST modules for use in many contexts
+#summary Enterprise-tested Query+JST module for use in ajax contexts such as static pages and java portals.
 
 = Introduction =
 
