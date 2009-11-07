@@ -1,18 +1,20 @@
-#summary 2-principles 4 enterprise application programmers
+#summary Enterprise use of [TrimPathCore]
 
 = Introduction =
 
 Principle 1:  TrimPath
   * eschew server-side UI technologies
   * de-couple/separation of UI from server
-  * services
+  * demisauce
 
 Principle 2: Enterprise
   * Java 
   * Spring toolkit technology
-  * Focus on creating services,  rather than binding UI to services on server-side
+  * Services,  rather than binding UI to services on server-side
 
 
 = Details =
 
 Related to [TrimPathCore]
+
+Why focus on Spring if the idea is to separate UI from server?  Because we want to get paid,  and we want to focus on the right things on the server,  services,  not JSF or SEAM or other large investments that focus on binding UI with services.  We need portable UIs.
