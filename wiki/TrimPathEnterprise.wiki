@@ -1,0 +1,18 @@
+#summary 2-principles 4 enterprise application programmers
+
+= Introduction =
+
+Principle 1:  TrimPath
+* eschew server-side UI technologies
+* de-couple/separation of UI from server
+* services
+
+Principle 2: Enterprise
+* Java 
+* Spring toolkit technology
+* Focus on creating services,  rather than binding UI to services on server-side
+
+
+= Details =
+
+Related to [TrimPathCore]
