@@ -17,4 +17,4 @@ Principle 2: Enterprise
 
 Related to [TrimPathCore]
 
-Why focus on Spring if the idea is to separate UI from server?  Because we want to get paid,  and we want to focus on the right things on the server,  services,  not JSF or SEAM or other large investments that focus on binding UI with services.  We need portable UIs.
+Why focus on Spring if the idea is to separate UI from server?  Because we want to get paid,  and we want to focus on the right things on the server,  services,  not JSF or SEAM or other large investments that focus on binding UI with services.  We need portable UIs.  My UI should easily go from a loosely dropped in a portlet or even to a static page -- no serverside processing.
