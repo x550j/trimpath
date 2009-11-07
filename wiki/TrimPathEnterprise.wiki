@@ -1,4 +1,4 @@
-#summary Enterprise use of [TrimPathCore]
+#summary Enterprise use of TrimPathCore,  portable UIs,  service-oriented architecture
 
 = Introduction =
 
