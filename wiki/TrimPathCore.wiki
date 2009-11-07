@@ -23,3 +23,5 @@ To-do:
 make trimpath core upload
 make ajax helper upload
 make branch for core and helper (to support various export formats and uses,  ongoing).
+
+Main tool of [TrimPathEnterprise],  enterprise applications detailed there.
