@@ -16,6 +16,7 @@ Although these personal wiki's are interesting and have a chance at replacing yo
 TrimJunction aims for this future by adding Model-View-Controller and SQL programming concepts to the SPA party, with all the amenities that we've come to expect from open-source and view-source hospitality.
 
 == Known SPA Applications ==
+  * [http://www.thomasweibel.ch/sudoku/ Sudoku] - by Thomas Weibel
   * [http://code.google.com/p/trimpath/wiki/NextAction Next Action]
   * [http://www.tiddlywiki.com TiddlyWiki]
   * [http://shared.snapgrid.com/gtd_tiddlywiki.html GTDTiddlyWiki] 
@@ -39,8 +40,6 @@ TrimJunction aims for this future by adding Model-View-Controller and SQL progra
 
 ----
 See also: [http://code.google.com/p/trimpath/wiki/SinglePageApplicationAndDevelopmentEnvironment Spade]
-
-
 
 
 
