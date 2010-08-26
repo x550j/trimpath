@@ -26,3 +26,6 @@ Why focus on Spring if the idea is to separate UI from server?  Because we want 
 1. Successful production deployment of front end status reporting ajax portlet for Massive Legal Dept Enterprise App.
 
 2. Successful production deployment of another ajax portlet,  a policy viewer and exporter that governs the movement of Enterprise Lifeblood Records.
+
+
+gol dern it mootools sucks.  more later...  do we really need to write all this incompatible crap that alters prototypes of native classes?  trimpath query does a little bit.  now I can't use sexyforms.
