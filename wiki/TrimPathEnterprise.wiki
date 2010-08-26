@@ -5,11 +5,11 @@
 Principle 1:  TrimPath
   * eschew server-side UI technologies
   * de-couple/separation of UI from server
-  * demisauce
+  * demisauce pattern
 
 Principle 2: Enterprise
   * Java 
-  * Spring toolkit technology
+  * Jboss
   * Services,  rather than binding UI to services on server-side
 
 
