@@ -1,0 +1,1 @@
+Javascript, ASP, Ruby, Ruby on Rails developer.
